@@ -1,33 +1,57 @@
 <template>
-  <svg
-    class="NuxtLogo"
-    width="245"
-    height="180"
-    viewBox="0 0 452 342"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g fill="none" fill-rule="evenodd">
-      <path
-        d="M139 330l-1-2c-2-4-2-8-1-13H29L189 31l67 121 22-16-67-121c-1-2-9-14-22-14-6 0-15 2-22 15L5 303c-1 3-8 16-2 27 4 6 10 12 24 12h136c-14 0-21-6-24-12z"
-        fill="#00C58E"
-      />
-      <path
-        d="M447 304L317 70c-2-2-9-15-22-15-6 0-15 3-22 15l-17 28v54l39-67 129 230h-49a23 23 0 0 1-2 14l-1 1c-6 11-21 12-23 12h76c3 0 17-1 24-12 3-5 5-14-2-26z"
-        fill="#108775"
-      />
-      <path
-        d="M376 330v-1l1-2c1-4 2-8 1-12l-4-12-102-178-15-27h-1l-15 27-102 178-4 12a24 24 0 0 0 2 15c4 6 10 12 24 12h190c3 0 18-1 25-12zM256 152l93 163H163l93-163z"
-        fill="#2F495E"
-        fill-rule="nonzero"
-      />
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-200 -200 400 400" id="svg">
+    <defs>
+      <filter id="glow" height="300%" width="300%" x="-75%" y="-75%">
+        <feMorphology operator="erode" radius="1" in="SourceAlpha" result="dilated"></feMorphology>
+        <feGaussianBlur in="dilated" stdDeviation="15" color-interpolation-filters="sRGB" color-rendering="optimizeSpeed" result="blurred"></feGaussianBlur>
+        <feFlood flood-color="white" result="flooded">
+          <animate attributeName="flood-color" name="myanim" begin="indefinite" dur="1.5s" calcMode="spline" values="white;rgba(255,255,255,0.35)" keySplines="0.5,0,0.3,1" fill="freeze"></animate>
+        </feFlood>
+        <feComposite in="flooded" in2="blurred" operator="in" result="composed"></feComposite>
+        <feMerge>
+          <feMergeNode in="composed"></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+    </defs>
+    <g id="fitz-logo" filter="url(#glow)" style="visibility: visible;">
+      <animate id="opacityAnim" attributeName="opacity" from="0" to="1" dur="1s" begin="indefinite"></animate>
+      <animateTransform name="myanim" begin="indefinite" attributeName="transform" type="scale" additive="sum" dur="1.5s" calcMode="spline" values="1.2;1" keySplines="0.3,0,0,1"></animateTransform>
+      <g id="stroked" stroke="white" stroke-width="4" stroke-linecap="square" fill="none">
+        <circle r="142.5">
+          <set attributeName="stroke-dasharray" to="895.353906273" dur="1.5s"></set>
+          <animate name="myanim" begin="indefinite" attributeName="stroke-dashoffset" dur="1.5s" calcMode="spline" values="895.353906273;0" keySplines="0.333,0,0.222,1"></animate>
+          <animateTransform name="myanim" begin="indefinite" attributeName="transform" type="rotate" dur="1.5s" calcMode="spline" values="-90 0 0;-270 0 0" keySplines="0.333,0,0.222,1"></animateTransform>
+        </circle>
+        <path id="z" d="m -76 -77 h 134 l -116 154 h 134">
+          <set attributeName="visibility" to="hidden" dur="0.2s"></set>
+          <animate name="myanim" begin="indefinite" attributeName="d" dur="1.3s" calcMode="spline" values="M-76,-77 h0 l0,0 h0;M-76,-77 h134 l0,0 h0;M-76,-77 h134 l-116,154 h0;M-76,-77 h134 l-116,154 h134" keySplines="0,0,1,0;0,0,1,1;0,1,1,1" keyTimes="0;0.15;0.3;1"></animate>
+        </path>
+      </g>
+      <g id="filled" fill="white">
+        <g id="vertical">
+          <set attributeName="visibility" to="hidden" dur="0.4s"></set>
+          <path id="vertical-top" d="M -2 -73 L 2 -73 L 2 -9.3 L -2 -4 Z">
+            <animate name="myanim" begin="indefinite" attributeName="d" dur="0.2s" from="M-2,-73L2,-73L2,-73-2,-73z" to="M-2,-73L2,-73L2,-4L-2,-4z"></animate>
+          </path>
+          <path id="vertical-bottom" d="M 2 73 L -2 73 L -2 9.3 L 2 4 Z">
+            <animate name="myanim" begin="indefinite" attributeName="d" dur="0.2s" from="M2,73L-2,73L-2,73L2,73z" to="M2,73L-2,73L-2,4L2,4z"></animate>
+          </path>
+        </g>
+        <g id="horizontal">
+          <set attributeName="visibility" to="hidden" dur="0.6s"></set>
+          <path id="horizontal-left" d="M -3.5 -2 L -6.5 2 L -35 2 L -35 -2 Z">
+            <animate name="myanim" begin="indefinite" attributeName="d" dur="0.9s" calcMode="spline" values="M-3.5,-2L-6.5,2L-6.5,2L-6.2,-2z;M-3.5,-2L-6.5,2L-35,2L-35,-2z" keySplines="0,0.25,0,1"></animate>
+          </path>
+          <path id="horizontal-right" d="M 3.5 2 L 6.5 -2 L 35 -2 L 35 2 Z">
+            <animate name="myanim" begin="indefinite" attributeName="d" dur="0.9s" calcMode="spline" values="M3.5,2L6.5,-2L6.5,-2L6.5,2z;M3.5,2L6.5,-2L35,-2L35,2z" keySplines="0,0.25,0,1"></animate>
+          </path>
+        </g>
+      </g>
     </g>
   </svg>
 </template>
 <style>
-.NuxtLogo {
-  animation: 1s appear;
-  margin: auto;
-}
 
 @keyframes appear {
   0% {

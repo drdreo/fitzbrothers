@@ -1,0 +1,33 @@
+@import '~assets/styles/overrides.scss';
+@import '~bulma/sass/utilities/mixins.sass';
+
+.navbar {
+  @include tablet {
+    background-color: transparent;
+  }
+
+  &-item {
+    transition: all .35s ease;
+  }
+
+  .bandname {
+    font-size: 18px;
+  }
+
+  &.is-off-landing {
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    color: $text;
+    .bandname {
+      font-size: 14px;
+    }
+
+    .navbar-item {
+      color: $text;
+
+      &.is-active, &:hover {
+        color: $gold;
+      }
+    }
+  }
+}

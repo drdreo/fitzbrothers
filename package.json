@@ -12,8 +12,12 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@nuxtjs/bulma": "^1.2.1",
+    "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
-    "@nuxtjs/bulma": "^1.2.1"
+    "sass-loader": "^8.0.2",
+    "vue-class-component": "^7.2.3",
+    "vue-scroll-reveal": "^1.0.11"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
