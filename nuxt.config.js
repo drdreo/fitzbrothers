@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'fitzbrothers | Surrender to the music',
+    title: 'Fitz Brothers (official) | Surrender to the music',
     meta: [
       { charset: 'utf-8' },
       { name: 'author', content: 'Andreas K. Hahn' },
@@ -16,7 +16,15 @@ export default {
         content: 'This is the official fitzbrothers website. Surrender to the music.'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    __dangerouslyDisableSanitizers: ['script'],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        innerHTML: `window.sib_prefix='sib';  window.sib_dateformat = 'dd-mm-yyyy'`, // needed for SendInBlue script init
+        type: 'text/javascript',
+        charset: 'utf-8'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -25,12 +33,16 @@ export default {
   /*
    ** Global CSS
    */
-  css: [{ src: '~/assets/styles/main.scss', lang: 'scss' }],
+  css: [
+    { src: '~/assets/styles/main.scss', lang: 'scss' },
+    '~/assets/styles/sendInBlue.css'],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/vue-scroll-reveal', ssr: false }
+    { src: '~/plugins/reveal', ssr: false },
+    { src: '~/plugins/lazyload', ssr: false },
+    { src: '~/plugins/scrollto', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -61,7 +73,14 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {
-      config.devtool = ctx.isClient ? 'eval-source-map' : 'inline-source-map'
+      config.devtool = ctx.isClient ? 'eval-source-map' : 'inline-source-map';
+      config.module.rules.push({
+                                 test: /\.(ogg|mp3|wav|mpe?g)$/i,
+                                 loader: 'file-loader',
+                                 options: {
+                                   name: '[path][name].[ext]'
+                                 }
+                               });
     }
   }
-}
+};

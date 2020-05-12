@@ -1,0 +1,19 @@
+@import '~assets/styles/overrides.scss';
+
+.social-platform {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+
+  color: $black;
+
+  &:hover {
+    color: $gold;
+  }
+
+  &__icon {
+    height: 50px;
+  }
+}

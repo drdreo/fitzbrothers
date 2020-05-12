@@ -21,3 +21,19 @@
   top: calc(35% + calc(100vw * 0.2));
   left: calc(50vw + (calc(100vw * 0.22) / 1.2));
 }
+
+#logo {
+  position: absolute;
+
+  filter: drop-shadow(0px 0px 5px #fff);
+  vertical-align: middle;
+
+  width: 22vw;
+  height: 22vw;
+  min-height: 210px;
+  min-width: 210px;
+
+  top: 10vw;
+  left: 50%;
+  transform: translateX(-50%);
+}

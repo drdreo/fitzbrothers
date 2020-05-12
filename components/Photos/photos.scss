@@ -1,0 +1,26 @@
+.section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.gallery {
+  background-color: #050306;
+
+  .image {
+    overflow: hidden;
+
+    cursor: pointer;
+    height: 100%;
+
+    img {
+      transition: all .35s;
+      height: 100%;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.03);
+      }
+    }
+  }
+}

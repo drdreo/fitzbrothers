@@ -1,0 +1,28 @@
+@import '~assets/styles/overrides.scss';
+
+.cookie-banner {
+  &__container {
+    display: inline-flex;
+    justify-content: center;
+    z-index: 2;
+    opacity: .8;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .cta {
+    color: $gold;
+    cursor: pointer;
+    margin: 0 1rem;
+  }
+
+  .link {
+    color: $gold;
+  }
+}

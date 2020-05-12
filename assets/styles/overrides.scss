@@ -1,6 +1,6 @@
 /* Import Bulma Utilities */
-@import '~bulma/sass/utilities/initial-variables';
-@import '~bulma/sass/utilities/functions';
+
+@import '~bulma/sass/utilities/all';
 
 /* Variable changes go here */
 // Colours
@@ -16,14 +16,18 @@ $gold-invert: findColorInvert($gold);
 $tablet: 768px;
 
 // Add Moon font
-$family-primary: Moon, "Helvetica Neue", "Arial", sans-serif;
+$family-primary: Hero, "Helvetica Neue", "Arial", sans-serif;
 $text: #333;
 
 // Navbar
-$navbar-item-color: #ffffffb3;
-$navbar-item-hover-color: $white;
+$navbar-item-hover-color: $gold;
 $navbar-item-hover-background-color: transparent;
 $navbar-breakpoint: $tablet;
+
+// Title
+$title-weight: 500;
+$title-family: Moon, "Helvetica Neue", "Arial", sans-serif;
+$subtitle-family: $title-family;
 
 // Add new color variables to the color map.
 @import "~bulma/sass/utilities/derived-variables";
