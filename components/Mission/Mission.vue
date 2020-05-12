@@ -4,10 +4,12 @@
 
             <h2 class="title has-text-white">Our Mission</h2>
             <hr/>
-            <p>We are two brothers aiming to create powerful music that can take you over entirely
-                and open up a different world within yourself.</p>
+            <p>Music has always been our way to sort out our thoughts and confront our emotions. It's a way of growing
+                and helping others grow into greater human beings. We hope we can inspire you and give you some sort of
+                experience that gets you more in touch with yourself.</p>
             <br/>
-            <p>Through our music we carry on the name of our ancestors.</p>
+            <p> That's what music has always done. That's what it
+                does for us.</p>
         </div>
     </section>
 </template>

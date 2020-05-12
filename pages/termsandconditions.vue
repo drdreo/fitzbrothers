@@ -277,8 +277,7 @@
                 <div class="column is-6 is-offset-1" id="form">
                     <h2 class="title is-2">Contact Us</h2>
 
-                    <form @submit="checkForm" method="post">
-
+                    <form @submit="checkForm" action="/ajax/ajax_contact_mail.php" method="post">
                         <div v-if="errors.length">
                             <b>Please correct the following error(s):</b>
                             <ul>
@@ -350,8 +349,6 @@
     message = '';
 
     checkForm(e: Event) {
-      e.preventDefault();
-
       this.errors = [];
 
       if (!this.name) {
@@ -372,16 +369,9 @@
       }
 
       if (!this.errors.length) {
-        fetch('ajax/ajax_contact_mail.php' + encodeURIComponent(this.name))
-          .then(async res => {
-            if (res.status === 204) {
-              console.log('Email has been sent successfully!');
-            } else if (res.status === 400) {
-              let errorResponse = await res.json();
-              this.errors.push(errorResponse.error);
-            }
-          });
+        return true;
       }
+      e.preventDefault();
     }
 
     validEmail(email: string) {

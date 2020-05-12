@@ -20,32 +20,35 @@
             <!--Musicvideo-->
             <figure class="image is-2by1">
                 <iframe class="has-ratio" width="2100" height="890"
-                        src="https://www.youtube-nocookie.com/embed/aHxVqtoO8R0?controls=0&showinfo=0&vq=hd1080&playsinline=1"
+                        src="https://www.youtube-nocookie.com/embed/YhROKTVRiSI?controls=0&showinfo=0&vq=hd1080&playsinline=1"
                         frameborder="0"></iframe>
             </figure>
 
             <section class="section cta">
-                <!--                <a href="https://itunes.apple.com/at/album/worth-your-while-single/1448359692?app=itunes&ign-mpt=uo%3D4"-->
-                <!--                   target="_blank" title="Buy on iTunes">-->
-                <!--                    <img src="~assets/images/ctas/itunes.svg" alt="Buy on iTunes">-->
-                <!--                </a>-->
-
-                <!--                <a href="https://play.google.com/store/music/album/Worth_Your_While?id=Bxwbio52nvr5ghaxhxl3tcxvmua&hl=en_US"-->
-                <!--                   target="_blank" title="Buy on GooglePlay">-->
-                <!--                    <img src="~assets/images/ctas/google.svg" height="52px" alt="Buy on GooglePlay">-->
-                <!--                </a>-->
-                <!--                <a href="https://www.amazon.de/gp/product/B07MBFSQ6L?pf_rd_p=d12b27d6-0a90-4a73-9da3-4e84e7c49e87&pf_rd_r=8BXZ1TH326NDFNQQFQ9A&tag=ton08-20"-->
-                <!--                   target="_blank" title="Buy on Amazon">-->
-                <!--                    <img src="~assets/images/ctas/amazon.svg" alt="Buy on Amazon">-->
-                <!--                </a>-->
-                <a href="https://open.spotify.com/album/3J5hxRdhUpaCk3UfWfmPYB" target="_blank"
-                   title="Buy on Spotify">
+                <a href="https://music.apple.com/at/artist/fitz-brothers/1506988785?l=en"
+                   target="_blank" title="Listen on iTunes">
+                    <img src="~assets/images/ctas/itunes.svg" alt="Listen on iTunes">
+                </a>
+                <a href="https://play.google.com/store/music/artist/Fitz_Brothers?id=A3eookbyrzsy4o42xsyaqklb3rm"
+                   target="_blank" title="Listen on GooglePlay">
+                    <img class="google-cta" src="~assets/images/ctas/google.svg"  alt="Listen on GooglePlay">
+                </a>
+                <a href="https://music.amazon.de/artists/B086ZK8XMM?ref=dm_sh_Glqu3oCByvvDwcLMmlrqFJFsG"
+                   target="_blank" title="Listen on Amazon">
+                    <img src="~assets/images/ctas/amazon.svg" alt="Listen on Amazon">
+                </a>
+                <a href="https://open.spotify.com/artist/5fZMIiZ4K0VMfi4Ebo6M71?si=ZeduSPMbRJSGm3_ehCaTyQ" target="_blank"
+                   title="Listen on Spotify">
                     <img src="~assets/images/ctas/spotify.svg" alt="Listen on Spotify">
                 </a>
-                <!--                <a href="https://www.deezer.com/de/album/83299172" target="_blank"-->
-                <!--                   title="Buy on Deezer">-->
-                <!--                    <img src="~assets/images/ctas/deezer.svg" alt="Listen on Deezer">-->
-                <!--                </a>-->
+                <a href="https://www.deezer.com/artist/91013882?utm_source=deezer&utm_content=artist-91013882&utm_term=1720846922_1587904265&utm_medium=web" target="_blank"
+                   title="Listen on Deezer">
+                    <img src="~assets/images/ctas/deezer.svg" alt="Listen on Deezer">
+                </a>
+                <a href="https://soundcloud.com/fitzbrothers" target="_blank"
+                   title="Listen on Soundcloud">
+                    <img class="soundcloud-cta" src="~assets/images/ctas/soundcloud.png" alt="Listen on Soundcloud">
+                </a>
             </section>
 
             <section class="section  signup">
