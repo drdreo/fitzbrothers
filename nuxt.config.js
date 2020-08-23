@@ -9,11 +9,11 @@ export default {
       { charset: 'utf-8' },
       { name: 'author', content: 'Andreas K. Hahn' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'keywords', content: 'Band, fitz, FITZ, F-I-T-Z, FITZ!, Austrian Band, homepage' },
+      { name: 'keywords', content: 'Band, fitz, FITZ, F-I-T-Z, FITZ!, Austrian Band, Fitz Brothers' },
       {
         hid: 'description',
         name: 'description',
-        content: 'This is the official fitzbrothers website. Surrender to the music.'
+        content: 'This is the official Fitz Brothers website. Surrender to the music.'
       }
     ],
     __dangerouslyDisableSanitizers: ['script'],
@@ -57,7 +57,17 @@ export default {
    */
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
+    'nuxt-facebook-pixel-module',
   ],
+  /**
+   * Facebook Pixel config
+   */
+  facebook: {
+    /* module options */
+    track: 'PageView',
+    pixelId: '1060878250708992',
+    disabled: true
+  },
   /*
    ** Build configuration
    */

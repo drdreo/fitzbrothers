@@ -23,21 +23,25 @@
   import Vue from 'vue';
   import Component from 'vue-class-component';
 
-  @Component({
-    components: {}
-  })
+  @Component
   export default class CookieBanner extends Vue {
 
     isConsent = true;
+    $fb: any;
 
     mounted() {
       this.isConsent = localStorage.getItem('cookie-consent') == 'true';
+
+      if(this.isConsent){
+        this.$fb.enable();
+      }
     }
 
     consent() {
       if (process.browser) {
         localStorage.setItem('cookie-consent', 'true');
         this.isConsent = true;
+        this.$fb.enable();
       }
     }
   }

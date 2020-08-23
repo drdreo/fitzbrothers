@@ -5,7 +5,7 @@
             <div class="columns">
                 <div class="single-preview has-text-centered column is-12">
                     <h2 class="title has-text-weight-bold">New Single</h2>
-                    <p class="subtitle is-6">OUT NOW</p>
+                    <p class="subtitle is-6 is-uppercase">out on 4th september</p>
 
                     <div class="columns">
                         <div class="column is-6 is-offset-3">

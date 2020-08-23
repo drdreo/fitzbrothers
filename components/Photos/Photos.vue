@@ -26,12 +26,12 @@
   import CoolLightBox from 'vue-cool-lightbox';
   import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css';
 
-  const photo1 = require('~/assets/images/gallery/5.jpg');
-  const photo1_thumb = require('~/assets/images/gallery/5_thumb.jpg');
+  const photo1 = require('~/assets/images/gallery/7.jpg');
+  const photo1_thumb = require('~/assets/images/gallery/7_thumb.jpg');
   const photo2 = require('~/assets/images/gallery/mid.jpg');
   const photo2_thumb = require('~/assets/images/gallery/mid_thumb.jpg');
-  const photo3 = require('~/assets/images/gallery/8.jpg');
-  const photo3_thumb = require('~/assets/images/gallery/8_thumb.jpg');
+  const photo3 = require('~/assets/images/gallery/5.jpg');
+  const photo3_thumb =  require('~/assets/images/gallery/5_thumb.jpg');
 
   @Component({
     components: {

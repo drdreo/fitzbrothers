@@ -84,6 +84,7 @@
 
   @Component
   export default class Logo extends Vue {
+    private $fb: any;
 
     mounted() {
       this.startAnimation();
@@ -111,6 +112,9 @@
       audio.onended = () => {
         logo.classList.remove('rotate');
       };
+
+      // track for FB
+      this.$fb.query('trackCustom', 'LogoSpin');
     }
   }
 </script>
