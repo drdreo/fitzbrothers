@@ -5,12 +5,12 @@
       <div class="columns">
         <div class="single-preview has-text-centered column is-12">
           <h2 class="title has-text-weight-bold">New Single</h2>
-          <p class="subtitle is-6 is-uppercase">out on 4th september</p>
+          <p class="subtitle is-6 is-uppercase">out on 9th April</p>
 
           <div class="columns">
             <div class="column is-6 is-offset-3">
               <figure class="image is-square">
-                <img v-lazy="require('~/assets/images/single_cover.jpg')" alt="Worth Your While cover"/>
+                <img v-lazy="require('~/assets/images/single_cover.jpg')" alt="7 Years"/>
               </figure>
             </div>
           </div>

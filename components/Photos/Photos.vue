@@ -30,8 +30,8 @@
   const photo1_thumb = require('~/assets/images/gallery/7_thumb.jpg');
   const photo2 = require('~/assets/images/gallery/mid.jpg');
   const photo2_thumb = require('~/assets/images/gallery/mid_thumb.jpg');
-  const photo3 = require('~/assets/images/gallery/5.jpg');
-  const photo3_thumb =  require('~/assets/images/gallery/5_thumb.jpg');
+  const photo3 = require('~/assets/images/gallery/right.jpg');
+  const photo3_thumb =  require('~/assets/images/gallery/right_thumb.jpg');
 
   @Component({
     components: {
