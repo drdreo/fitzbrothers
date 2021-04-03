@@ -1,3 +1,6 @@
+@import '~assets/styles/overrides.scss';
+@import '~bulma/sass/utilities/mixins.sass';
+
 .landing {
   position: relative;
   width: 100%;
@@ -8,6 +11,11 @@
   background-image: url(~assets/images/HomepageHeader.jpg);
   text-align: center;
   color: #fff;
+
+  @include mobile {
+    height: 60vh;
+    margin-top: 40px;
+  }
 }
 
 #slogan {
@@ -20,6 +28,11 @@
 
   top: calc(35% + calc(100vw * 0.2));
   left: calc(50vw + (calc(100vw * 0.22) / 1.2));
+
+  @include mobile {
+    width: calc(30vw);
+    height: calc(30vw);
+  }
 }
 
 #logo {
