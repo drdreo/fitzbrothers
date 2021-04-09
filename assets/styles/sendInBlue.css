@@ -9,9 +9,7 @@ div#sib_embed_signup .needsfilled {
 
 div#sib_embed_signup input[type="text"] {
     border: 1px solid #CCCCCC;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+    border-radius: 4px 0 0 4px;
 }
 
 div#sib_embed_signup div.message_area {

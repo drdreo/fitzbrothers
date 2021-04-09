@@ -274,7 +274,7 @@
             <a href="//moritzkertesz.com" target="_blank" onclick="return false;">Moritz Kertesz</a>
           </p>
         </div>
-        <div class="column is-6 is-offset-1" id="form">
+        <div class="column is-6 is-offset-1 is-hidden" id="form">
           <h2 class="title is-2">Contact Us</h2>
 
           <form @submit="checkForm">
