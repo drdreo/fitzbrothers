@@ -1,41 +1,41 @@
 <template>
     <div>
-        <Navbar/>
-        <Landing/>
-        <SinglePreview/>
-        <Mission/>
-        <Photos/>
-        <Social/>
-        <LegalFooter/>
-        <client-only>
-            <CookieBanner/>
-        </client-only>
+        <Navbar />
+        <Landing />
+        <SinglePreview />
+        <Mission />
+        <Photos />
+        <Social />
+        <LegalFooter />
+        <ClientOnly>
+            <CookieBanner />
+        </ClientOnly>
     </div>
 </template>
 
 <script lang="ts">
-  import Vue from 'vue';
-  import Logo from '~/components/Logo/Logo.vue';
-  import Navbar from '~/components/Navbar/Navbar.vue';
-  import Landing from '~/components/Landing/Landing.vue';
-  import SinglePreview from '~/components/SinglePreview/SinglePreview.vue';
-  import Mission from '~/components/Mission/Mission.vue';
-  import Photos from '~/components/Photos/Photos.vue';
-  import Social from '~/components/Social/Social.vue';
-  import LegalFooter from '~/components/LegalFooter/LegalFooter.vue';
-  import CookieBanner from '~/components/CookieBanner/CookieBanner.vue';
+import { defineComponent } from 'vue'
+import CookieBanner from '~/components/CookieBanner/CookieBanner.vue'
+import Landing from '~/components/Landing/Landing.vue'
+import LegalFooter from '~/components/LegalFooter/LegalFooter.vue'
+import Logo from '~/components/Logo/Logo.vue'
+import Mission from '~/components/Mission/Mission.vue'
+import Navbar from '~/components/Navbar/Navbar.vue'
+import Photos from '~/components/Photos/Photos.vue'
+import SinglePreview from '~/components/SinglePreview/SinglePreview.vue'
+import Social from '~/components/Social/Social.vue'
 
-  export default Vue.extend({
+export default defineComponent({
     components: {
-      CookieBanner,
-      Photos,
-      Landing,
-      Navbar,
-      Logo,
-      SinglePreview,
-      Mission,
-      Social,
-      LegalFooter
+        CookieBanner,
+        Photos,
+        Landing,
+        Navbar,
+        Logo,
+        SinglePreview,
+        Mission,
+        Social,
+        LegalFooter
     }
-  });
+})
 </script>

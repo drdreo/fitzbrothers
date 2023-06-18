@@ -1,5 +1,5 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+    <div>
+        <slot />
+    </div>
 </template>

@@ -1,27 +1,81 @@
 <template>
     <div class="landing">
         <div id="slogan" ref="slogan">
-            <img src="~assets/images/surrender-to-the-music.svg" type="image/svg+xml" alt=""/>
+            <img
+                src="~assets/images/surrender-to-the-music.svg"
+                type="image/svg+xml"
+                alt=""
+            />
         </div>
 
         <div id="logo">
-            <logo/>
+            <logo />
         </div>
     </div>
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
-  import Component from 'vue-class-component'
-  import Logo from '~/components/Logo/Logo.vue'
-  @Component({
-    components: { Logo }
-  })
-  export default class Landing extends Vue {
+import { defineComponent } from 'vue'
+import Logo from '~/components/Logo/Logo.vue'
 
-  }
+export default defineComponent({
+    components: {
+        Logo
+    }
+})
 </script>
 
-<style scoped src="./landing.scss" lang="scss">
+<style scoped lang="scss">
+@import '~/assets/styles/overrides.scss';
+@import 'bulma/sass/utilities/mixins.sass';
 
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-image: url('~/assets/images/HomepageHeader.jpg');
+    text-align: center;
+    color: #fff;
+
+    @include mobile {
+        height: 60vh;
+        margin-top: 40px;
+    }
+}
+
+#slogan {
+    position: absolute;
+    transform: rotate(-7deg);
+    vertical-align: middle;
+
+    width: calc(100vw * 0.22);
+    height: calc(100vw * 0.22);
+
+    top: calc(35% + calc(100vw * 0.2));
+    left: calc(50vw + (calc(100vw * 0.22) / 1.2));
+
+    @include mobile {
+        width: calc(30vw);
+        height: calc(30vw);
+    }
+}
+
+#logo {
+    position: absolute;
+
+    filter: drop-shadow(0px 0px 5px #fff);
+    vertical-align: middle;
+
+    width: 22vw;
+    height: 22vw;
+    min-height: 210px;
+    min-width: 210px;
+
+    top: 10vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
 </style>

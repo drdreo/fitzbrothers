@@ -1,18 +1,24 @@
 <template>
     <section id="photos" class="section has-text-centered">
         <h2 class="title">Photos</h2>
-        <hr/>
+        <hr />
 
-        <CoolLightBox
-                :items="images"
-                :index="index"
-                @close="index = null">
-        </CoolLightBox>
+        <vue-easy-lightbox
+            :visible="visibleRef"
+            :imgs="images"
+            :index="indexRef"
+            @hide="onHide"
+        ></vue-easy-lightbox>
+
         <div class="gallery columns is-gapless">
-            <div class="column is-4" v-for="(image, imageIndex) in images" :key="imageIndex"
-                 @click="index = imageIndex">
+            <div
+                class="column is-4"
+                v-for="(thumb, imageIndex) in thumbnails"
+                :key="imageIndex"
+                @click="() => showImg(imageIndex)"
+            >
                 <figure class="image">
-                    <img v-lazy="image.thumb" alt="Band Image"/>
+                    <img :src="thumb" alt="Band Image" />
                 </figure>
             </div>
         </div>
@@ -20,34 +26,69 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue';
-  import Component from 'vue-class-component';
-  // use the component
-  import CoolLightBox from 'vue-cool-lightbox';
-  import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css';
+import { defineComponent } from 'vue'
+import { ref } from 'vue'
+import VueEasyLightbox from 'vue-easy-lightbox'
+import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
 
-  const photo1 = require('~/assets/images/gallery/7.jpg');
-  const photo1_thumb = require('~/assets/images/gallery/7_thumb.jpg');
-  const photo2 = require('~/assets/images/gallery/mid.jpg');
-  const photo2_thumb = require('~/assets/images/gallery/mid_thumb.jpg');
-  const photo3 = require('~/assets/images/gallery/right.jpg');
-  const photo3_thumb =  require('~/assets/images/gallery/right_thumb.jpg');
+const photo1 = 'images/gallery/left.jpg'
+const photo1_thumb = 'images/gallery/left_thumb.jpg'
+const photo2 = 'images/gallery/mid.jpg'
+const photo2_thumb = 'images/gallery/mid_thumb.jpg'
+const photo3 = 'images/gallery/right.jpg'
+const photo3_thumb = 'images/gallery/right_thumb.jpg'
 
-  @Component({
+export default defineComponent({
     components: {
-      CoolLightBox
+        VueEasyLightbox
+    },
+    setup() {
+        const visibleRef = ref(false)
+        const indexRef = ref(0)
+        const showImg = (index: number) => {
+            console.log(index)
+            indexRef.value = index
+            visibleRef.value = true
+        }
+        const onHide = () => (visibleRef.value = false)
+
+        return {
+            visibleRef,
+            indexRef,
+            images: [photo1, photo2, photo3],
+            thumbnails: [photo1_thumb, photo2_thumb, photo3_thumb],
+            showImg,
+            onHide
+        }
     }
-  })
-  export default class Photos extends Vue {
-    images = [
-      { src: photo1, thumb: photo1_thumb },
-      { src: photo2, thumb: photo2_thumb },
-      { src: photo3, thumb: photo3_thumb }
-    ];
-    index = null;
-  }
+})
 </script>
 
-<style scoped src="./photos.scss" lang="scss">
+<style scoped lang="scss">
+.section {
+    padding-left: 0;
+    padding-right: 0;
+}
 
+.gallery {
+    background-color: #050306;
+
+    .image {
+        overflow: hidden;
+
+        cursor: pointer;
+        height: 100%;
+
+        img {
+            transition: all 0.35s;
+            height: 100%;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.03);
+            }
+        }
+    }
+}
 </style>

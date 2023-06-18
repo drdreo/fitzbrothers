@@ -1,10 +1,14 @@
-
 @font-face {
   font-family: Moon;
-  src: url("~assets/fonts/Moon_Light.otf") format("opentype");
+  src: url("~/assets/fonts/Moon_Light.otf") format("opentype");
 }
 
 @font-face {
   font-family: Hero;
-  src: url("~assets/fonts/Hero.otf") format("opentype");
+  src: url("~/assets/fonts/Hero.otf") format("opentype");
+}
+
+@font-face {
+	font-family: FitzBrothers;
+	src: url("~/assets/fonts/FitzBrothers-Normal.otf") format("opentype");
 }

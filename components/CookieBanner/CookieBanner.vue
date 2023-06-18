@@ -3,50 +3,87 @@
         <div class="cookie-banner__container is-hidden-mobile">
             <div class="cta" @click="consent">X</div>
             <p>
-                This website uses cookies to give you an incredible experience. By using this website you agree to
-                our
-                <nuxt-link to="/termsandconditions" class="link">Terms & Conditions / Data Privacy</nuxt-link>
+                This website uses cookies to give you an incredible experience.
+                By using this website you agree to our
+                <NuxtLink to="/termsandconditions" class="link"
+                    >Terms & Conditions / Data Privacy</NuxtLink
+                >
             </p>
-
         </div>
         <div class="cookie-banner__container is-hidden-tablet">
             <div class="cta" @click="consent">X</div>
             <p>
                 This website uses cookies,
-                <nuxt-link to="/termsandconditions" class="link">Terms / Privacy.</nuxt-link>
+                <NuxtLink to="/termsandconditions" class="link"
+                    >Terms / Privacy.</NuxtLink
+                >
             </p>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-  import Vue from 'vue';
-  import Component from 'vue-class-component';
+import { defineComponent } from 'vue'
 
-  @Component
-  export default class CookieBanner extends Vue {
+declare const fbq: Function
 
-    isConsent = true;
-    $fb: any;
+const PIXEL_ID = '1060878250708992'
 
+export default defineComponent({
+    data() {
+        return {
+            isConsent: true
+        }
+    },
     mounted() {
-      this.isConsent = localStorage.getItem('cookie-consent') == 'true';
+        this.isConsent = localStorage.getItem('cookie-consent') === 'true'
 
-      if(this.isConsent){
-        this.$fb.enable();
-      }
+        if (this.isConsent) {
+            setTimeout(() => {
+                fbq('init', PIXEL_ID)
+                fbq('track', 'PageView')
+            }, 3000)
+        }
+    },
+    methods: {
+        consent() {
+            localStorage.setItem('cookie-consent', 'true')
+            this.isConsent = true
+            fbq('init', PIXEL_ID)
+            fbq('track', 'PageView')
+        }
     }
-
-    consent() {
-      if (process.browser) {
-        localStorage.setItem('cookie-consent', 'true');
-        this.isConsent = true;
-        this.$fb.enable();
-      }
-    }
-  }
+})
 </script>
 
-<style scoped src="./cookie-banner.scss" lang="scss">
+<style scoped lang="scss">
+@import '~/assets/styles/overrides.scss';
 
+.cookie-banner {
+    &__container {
+        display: inline-flex;
+        justify-content: center;
+        z-index: 2;
+        opacity: 0.8;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        font-size: 14px;
+        background-color: #000;
+        color: #fff;
+        padding: 4px;
+    }
+
+    .cta {
+        color: $gold;
+        cursor: pointer;
+        margin: 0 1rem;
+    }
+
+    .link {
+        color: $gold;
+    }
+}
 </style>

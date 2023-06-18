@@ -1,42 +1,41 @@
 <template>
-  <footer class="footer">
-    <p class="is-size-7">
-      <span>Fitz Brothers</span>
-      <span class="seperator">|</span>
-      <nuxt-link class="link" to="/termsandconditions">Terms & Conditions / Data Privacy</nuxt-link>
-    </p>
-  </footer>
+    <footer class="footer">
+        <p class="is-size-7">
+            <span>Fitz Brothers</span>
+            <span class="seperator">|</span>
+            <NuxtLink class="link" to="/termsandconditions"
+                >Terms & Conditions / Data Privacy</NuxtLink
+            >
+        </p>
+    </footer>
 </template>
 
 <script>
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import { defineComponent } from 'vue'
 
-@Component
-export default class LegalFooter extends Vue {}
+export default defineComponent({})
 </script>
 
 <style scoped lang="scss">
-@import "~assets/styles/overrides.scss";
+@import '~/assets/styles/overrides.scss';
 
 .footer {
-  margin: 15px;
-  display: flex;
-  justify-content: flex-end;
+    margin: 15px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-
 .seperator {
-  color: #dedede;
-  padding-left: 5px;
-  padding-right: 5px;
+    color: #dedede;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .link {
-  color: $gold;
+    color: $gold;
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover {
+        text-decoration: underline;
+    }
 }
 </style>

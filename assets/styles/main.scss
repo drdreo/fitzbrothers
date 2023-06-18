@@ -3,15 +3,16 @@
 @import "./overrides";
 
 /* Import the rest of Bulma */
-@import "~bulma/sass/base/all";
-@import "~bulma/sass/components/navbar";
-@import "~bulma/sass/elements/container";
-@import "~bulma/sass/elements/title";
-@import "~bulma/sass/elements/image";
-@import "~bulma/sass/elements/button";
-@import "~bulma/sass/grid/columns";
-@import "~bulma/sass/layout/section";
-@import "~bulma/sass/form/_all";
+@import "bulma/sass/base/all";
+@import "bulma/sass/components/navbar";
+@import "bulma/sass/elements/container";
+@import "bulma/sass/elements/title";
+@import "bulma/sass/elements/image";
+@import "bulma/sass/elements/button";
+@import "bulma/sass/grid/columns";
+@import "bulma/sass/helpers/all";
+@import "bulma/sass/layout/section";
+@import "bulma/sass/form/_all";
 
 
 // Custom Styles start here
@@ -30,4 +31,12 @@ hr {
   border: 3px #daa520;
   border-top-style: solid;
   max-width: 50px;
+}
+
+.has-text-centered {
+  text-align: center;
+}
+
+.has-text-white {
+	color: $white;
 }

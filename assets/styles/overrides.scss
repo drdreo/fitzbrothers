@@ -1,6 +1,6 @@
 /* Import Bulma Utilities */
 
-@import '~bulma/sass/utilities/all';
+@import 'bulma/sass/utilities/all';
 
 /* Variable changes go here */
 // Colours
@@ -30,7 +30,7 @@ $title-family: Moon, "Helvetica Neue", "Arial", sans-serif;
 $subtitle-family: $title-family;
 
 // Add new color variables to the color map.
-@import "~bulma/sass/utilities/derived-variables";
+@import "bulma/sass/utilities/derived-variables";
 $addColors: (
         "gold":($gold, $gold-invert)
 );
