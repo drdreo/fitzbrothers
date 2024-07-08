@@ -31,54 +31,36 @@ export default defineNuxtConfig({
             noscript: [
                 {
                     innerHTML: `<img height="1" width="1" style="display:none" 
-       src="https://www.facebook.com/tr?id=1060878250708992&ev=PageView&noscript=1"/>`,
+     src="https://www.facebook.com/tr?id=1060878250708992&ev=PageView&noscript=1"/>`,
                     tagPosition: 'bodyClose'
                 }
             ]
         }
     },
-    /*
-     ** Customize the progress-bar color
-     */
-    loading: { color: '#fff' },
+
     /*
      ** Global CSS
      */
     css: ['~/assets/styles/main.scss', '~/assets/styles/sendInBlue.css'],
+
     /*
      ** Plugins to load before mounting the App
      */
     plugins: [{ src: '~/plugins/reveal' }],
+
     /*
      ** Nuxt.js modules
      */
     modules: [],
+
     devServerHandlers: [],
+
+    devtools: { enabled: false },
+
     /*
      ** Build configuration
      */
-    build: {
-        postcss: {
-            preset: {
-                features: {
-                    customProperties: false
-                }
-            }
-        },
-        /*
-         ** You can extend webpack config here
-         */
-        extend(config, ctx) {
-            config.devtool = ctx.isClient
-                ? 'eval-source-map'
-                : 'inline-source-map'
-            config.module.rules.push({
-                test: /\.(ogg|mp3|wav|mpe?g)$/i,
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name].[ext]'
-                }
-            })
-        }
-    }
+    build: {},
+
+    compatibilityDate: '2024-07-08'
 })

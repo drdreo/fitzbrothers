@@ -4,15 +4,14 @@
             <div class="columns">
                 <div class="single-preview has-text-centered column is-12">
                     <h2 class="title has-text-weight-bold">New Single</h2>
-                    <p class="subtitle is-6 is-uppercase">June 23, 2023</p>
+                    <p class="subtitle is-6 is-uppercase">{{ displayDate }}</p>
 
                     <div class="columns">
                         <div class="column is-6 is-offset-3">
                             <figure class="image is-square">
                                 <img
                                     src="~assets/images/single_cover.jpg"
-                                    alt="Sunday"
-                                />
+                                    alt="Sunday" />
                             </figure>
                         </div>
                     </div>
@@ -25,138 +24,120 @@
                     class="has-ratio"
                     width="2100"
                     height="890"
-                    src="https://www.youtube-nocookie.com/embed/h_iDgBmaRjE?controls=0&showinfo=0&vq=hd1080&playsinline=1"
-                    frameborder="0"
-                ></iframe>
+                    src="https://www.youtube-nocookie.com/embed/h_iDgBmaRjE?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>
             </figure>
 
             <section class="section cta">
                 <a
                     href="https://music.apple.com/at/artist/fitz-brothers/1506988785?l=en"
                     target="_blank"
-                    title="Listen on iTunes"
-                >
+                    title="Listen on iTunes">
                     <img
                         src="~/assets/images/ctas/itunes.svg"
-                        alt="Listen on iTunes"
-                    />
+                        alt="Listen on iTunes" />
                 </a>
                 <a
                     href="https://play.google.com/store/music/artist/Fitz_Brothers?id=A3eookbyrzsy4o42xsyaqklb3rm"
                     target="_blank"
-                    title="Listen on GooglePlay"
-                >
+                    title="Listen on GooglePlay">
                     <img
                         class="google-cta"
                         src="~/assets/images/ctas/google.svg"
-                        alt="Listen on GooglePlay"
-                    />
+                        alt="Listen on GooglePlay" />
                 </a>
                 <a
                     href="https://music.amazon.de/artists/B086ZK8XMM?ref=dm_sh_Glqu3oCByvvDwcLMmlrqFJFsG"
                     target="_blank"
-                    title="Listen on Amazon"
-                >
+                    title="Listen on Amazon">
                     <img
                         src="~assets/images/ctas/amazon.svg"
-                        alt="Listen on Amazon"
-                    />
+                        alt="Listen on Amazon" />
                 </a>
                 <a
                     href="https://open.spotify.com/artist/5fZMIiZ4K0VMfi4Ebo6M71?si=ZeduSPMbRJSGm3_ehCaTyQ"
                     target="_blank"
-                    title="Listen on Spotify"
-                >
+                    title="Listen on Spotify">
                     <img
                         src="~assets/images/ctas/spotify.svg"
-                        alt="Listen on Spotify"
-                    />
+                        alt="Listen on Spotify" />
                 </a>
                 <a
                     href="https://www.deezer.com/artist/91013882?utm_source=deezer&utm_content=artist-91013882&utm_term=1720846922_1587904265&utm_medium=web"
                     target="_blank"
-                    title="Listen on Deezer"
-                >
+                    title="Listen on Deezer">
                     <img
                         src="~assets/images/ctas/deezer.svg"
-                        alt="Listen on Deezer"
-                    />
+                        alt="Listen on Deezer" />
                 </a>
                 <a
                     href="https://soundcloud.com/fitzbrothers"
                     target="_blank"
-                    title="Listen on Soundcloud"
-                >
+                    title="Listen on Soundcloud">
                     <img
                         class="soundcloud-cta"
                         src="~assets/images/ctas/soundcloud.png"
-                        alt="Listen on Soundcloud"
-                    />
+                        alt="Listen on Soundcloud" />
                 </a>
             </section>
 
-            <section class="section  signup">
+            <section class="section signup">
                 <h5 class="title is-5">Sign up and get the latest updates</h5>
 
-                <div id="sib_embed_signup" style="padding: 10px;">
+                <div
+                    id="sib_embed_signup"
+                    style="padding: 10px">
                     <div
                         class="forms-builder-wrapper"
-                        style="position:relative;margin-left: auto;margin-right: auto;"
-                    >
+                        style="
+                            position: relative;
+                            margin-left: auto;
+                            margin-right: auto;
+                        ">
                         <input
                             type="hidden"
                             id="sib_embed_signup_lang"
-                            value="de"
-                        />
+                            value="de" />
                         <input
                             type="hidden"
                             id="sib_embed_invalid_email_message"
-                            value="This is not a valid email!"
-                        />
+                            value="This is not a valid email!" />
                         <input
                             type="hidden"
                             name="primary_type"
                             id="primary_type"
-                            value="email"
-                        />
+                            value="email" />
                         <form
                             class="description"
                             id="theform"
                             name="theform"
                             action="https://my.sendinblue.com/users/subscribeembed/js_id/2qci2/id/1"
-                            onsubmit="return false;"
-                        >
+                            onsubmit="return false;">
                             <input
                                 type="hidden"
                                 name="js_id"
                                 id="js_id"
-                                value="2qc69"
-                            />
+                                value="2qc69" />
                             <input
                                 type="hidden"
                                 name="listid"
                                 id="listid"
-                                value="2"
-                            />
+                                value="2" />
                             <input
                                 type="hidden"
                                 name="from_url"
                                 id="from_url"
-                                value="yes"
-                            />
+                                value="yes" />
                             <input
                                 type="hidden"
                                 name="hdn_email_txt"
                                 id="hdn_email_txt"
-                                value=""
-                            />
+                                value="" />
                             <input
                                 type="hidden"
                                 name="req_hid"
                                 id="req_hid"
                                 value=""
-                                style="font-size: 13px;"
-                            />
+                                style="font-size: 13px" />
 
                             <div class="field has-addons has-addons-centered">
                                 <div class="control input-control">
@@ -168,8 +149,7 @@
                                         @blur="subscriptionBlur"
                                         id="email"
                                         value=""
-                                        placeholder="Enter your Email..."
-                                    />
+                                        placeholder="Enter your Email..." />
                                 </div>
                                 <div class="control">
                                     <button
@@ -179,8 +159,7 @@
                                         name="subscribe"
                                         @click="onSignup"
                                         id="addonSubscribe"
-                                        class="button is-gold"
-                                    >
+                                        class="button is-gold">
                                         Sign Up
                                     </button>
                                 </div>
@@ -188,8 +167,7 @@
                             <div
                                 ref="sub_hint"
                                 class="is-size-7 is-opaque-0"
-                                id="subscription-hint"
-                            >
+                                id="subscription-hint">
                                 <small
                                     >We won't bother you. We won't spam you. We
                                     won't ruin your day with unnecessary
@@ -238,6 +216,26 @@ export default defineComponent({
         onSignup() {
             fbq('trackCustom', 'Sign Up')
         }
+    },
+    data() {
+        return {
+            currentDate: new Date(),
+            targetDate: new Date('June 23, 2023')
+        }
+    },
+    computed: {
+        displayDate() {
+            if (this.currentDate > this.targetDate) {
+                return 'Out now'
+            } else {
+                // Format the target date according to your requirements
+                return this.targetDate.toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                })
+            }
+        }
     }
 })
 </script>
@@ -274,7 +272,8 @@ export default defineComponent({
             border: 1px solid #ccc;
 
             &:focus {
-                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+                box-shadow:
+                    inset 0 1px 1px rgba(0, 0, 0, 0.075),
                     0 0 8px #daa520 !important;
             }
         }
@@ -285,7 +284,9 @@ export default defineComponent({
         border-top-left-radius: 0;
 
         &.focus {
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #daa520 !important;
+            box-shadow:
+                inset 0 1px 1px rgba(0, 0, 0, 0.075),
+                0 0 8px #daa520 !important;
             outline: none;
         }
 
@@ -293,7 +294,9 @@ export default defineComponent({
         &:hover,
         &:focus {
             outline-color: #daa520 !important;
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #daa520 !important;
+            box-shadow:
+                inset 0 1px 1px rgba(0, 0, 0, 0.075),
+                0 0 8px #daa520 !important;
         }
     }
 

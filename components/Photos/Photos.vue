@@ -29,7 +29,7 @@
 import { defineComponent } from 'vue'
 import { ref } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
-import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
+// import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
 
 const photo1 = 'images/gallery/left.jpg'
 const photo1_thumb = 'images/gallery/left_thumb.jpg'
