@@ -63,23 +63,23 @@ import { defineComponent, ref } from "vue";
 
 export default defineComponent({
     setup() {
-        const onLanding = ref(true;
-        const menuOpen = ref(false;
+        const onLanding = ref(true);
+        const menuOpen = ref(false);
 
         const handleScroll = () => {
-            onLanding.value = window.scrollY + 50 < window.innerHeight
+            onLanding.value = window.scrollY + 50 < window.innerHeight;
         };
 
         const toggleMenu = () => {
-            menuOpen.value = !menuOpen.value
+            menuOpen.value = !menuOpen.value;
         };
 
         onMounted(() => {
-            window.addEventListener('scroll', handleScroll)
+            window.addEventListener("scroll", handleScroll);
         });
 
         onBeforeUnmount(() => {
-            window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener("scroll", handleScroll);
         });
 
         // expose to template and other options API hooks

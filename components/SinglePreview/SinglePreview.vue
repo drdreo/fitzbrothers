@@ -191,50 +191,50 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 declare const fbq: Function;
 
 export default defineComponent({
     mounted() {
-        const script = document.createElement'script'";
+        const script = document.createElement("script");
         script.src =
-            'https://my.sendinblue.com/public/theme/version4/assets/js/src/subscribe-validate.js?v=1489660964';
-        script.async = true
-        document.body.appendChild(script)
+            "https://my.sendinblue.com/public/theme/version4/assets/js/src/subscribe-validate.js?v=1489660964";
+        script.async = true;
+        document.body.appendChild(script);
     },
     methods: {
         subscriptionFocus() {
-            (this.$refs.sub_btn as HTMLElement).classList.add('focus');
+            (this.$refs.sub_btn as HTMLElement).classList.add("focus");
             (this.$refs.sub_hint as HTMLElement).classList.remove(
-                'is-opaque-0'
+                "is-opaque-0"
             );
         },
         subscriptionBlur() {
-            (this.$refs.sub_btn as HTMLElement).classList.remove('focus');
-            (this.$refs.sub_hint as HTMLElement).classList.add('is-opaque-0')
+            (this.$refs.sub_btn as HTMLElement).classList.remove("focus");
+            (this.$refs.sub_hint as HTMLElement).classList.add("is-opaque-0");
         },
         onSignup() {
-            fbq('trackCustom', 'Sign Up')
+            fbq("trackCustom", "Sign Up");
         }
     },
     data() {
         return {
             currentDate: new Date(),
-            targetDate: new Date('September 13, 2024')
+            targetDate: new Date("September 13, 2024")
         };
     },
     computed: {
         displayDate() {
             if (this.currentDate > this.targetDate) {
-                return 'Out now'
+                return "Out now";
             } else {
                 // Format the target date according to your requirements
-                return this.targetDate.toLocaleDateString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric'
-                })
+                return this.targetDate.toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric"
+                });
             }
         }
     }
