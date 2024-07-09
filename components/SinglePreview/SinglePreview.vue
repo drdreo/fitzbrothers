@@ -18,6 +18,8 @@
                 </div>
             </div>
 
+            <hr style="margin-bottom: 2.5rem; margin-top: 2rem" />
+
             <!--Musicvideo-->
             <figure class="image is-2by1">
                 <iframe
