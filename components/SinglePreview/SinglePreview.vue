@@ -197,7 +197,7 @@ declare const fbq: Function;
 
 export default defineComponent({
     mounted() {
-        const script = document.createElemen'script't);
+        const script = document.createElement'script'";
         script.src =
             'https://my.sendinblue.com/public/theme/version4/assets/js/src/subscribe-validate.js?v=1489660964';
         script.async = true
@@ -208,7 +208,7 @@ export default defineComponent({
             (this.$refs.sub_btn as HTMLElement).classList.add('focus');
             (this.$refs.sub_hint as HTMLElement).classList.remove(
                 'is-opaque-0'
-            )
+            );
         },
         subscriptionBlur() {
             (this.$refs.sub_btn as HTMLElement).classList.remove('focus');

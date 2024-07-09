@@ -15,6 +15,10 @@
 @import "bulma/sass/form/_all";
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 // Custom Styles start here
 .is-transparent {
   background-color: transparent;
