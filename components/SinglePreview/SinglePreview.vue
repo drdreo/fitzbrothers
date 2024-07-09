@@ -11,7 +11,7 @@
                             <figure class="image is-square">
                                 <img
                                     src="~assets/images/single_cover.jpg"
-                                    alt="Sunday" />
+                                    alt="Single Cover" />
                             </figure>
                         </div>
                     </div>
@@ -36,15 +36,15 @@
                         src="~/assets/images/ctas/itunes.svg"
                         alt="Listen on iTunes" />
                 </a>
-                <a
-                    href="https://play.google.com/store/music/artist/Fitz_Brothers?id=A3eookbyrzsy4o42xsyaqklb3rm"
-                    target="_blank"
-                    title="Listen on GooglePlay">
-                    <img
-                        class="google-cta"
-                        src="~/assets/images/ctas/google.svg"
-                        alt="Listen on GooglePlay" />
-                </a>
+                <!--                <a-->
+                <!--                    href="https://play.google.com/store/music/artist/Fitz_Brothers?id=A3eookbyrzsy4o42xsyaqklb3rm"-->
+                <!--                    target="_blank"-->
+                <!--                    title="Listen on GooglePlay">-->
+                <!--                    <img-->
+                <!--                        class="google-cta"-->
+                <!--                        src="~/assets/images/ctas/google.svg"-->
+                <!--                        alt="Listen on GooglePlay" />-->
+                <!--                </a>-->
                 <a
                     href="https://music.amazon.de/artists/B086ZK8XMM?ref=dm_sh_Glqu3oCByvvDwcLMmlrqFJFsG"
                     target="_blank"
@@ -192,26 +192,27 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-declare const fbq: Function
+
+declare const fbq: Function;
 
 export default defineComponent({
     mounted() {
-        const script = document.createElement('script')
+        const script = document.createElemen'script't);
         script.src =
-            'https://my.sendinblue.com/public/theme/version4/assets/js/src/subscribe-validate.js?v=1489660964'
+            'https://my.sendinblue.com/public/theme/version4/assets/js/src/subscribe-validate.js?v=1489660964';
         script.async = true
         document.body.appendChild(script)
     },
     methods: {
         subscriptionFocus() {
-            ;(this.$refs.sub_btn as HTMLElement).classList.add('focus')
-            ;(this.$refs.sub_hint as HTMLElement).classList.remove(
+            (this.$refs.sub_btn as HTMLElement).classList.add('focus');
+            (this.$refs.sub_hint as HTMLElement).classList.remove(
                 'is-opaque-0'
             )
         },
         subscriptionBlur() {
-            ;(this.$refs.sub_btn as HTMLElement).classList.remove('focus')
-            ;(this.$refs.sub_hint as HTMLElement).classList.add('is-opaque-0')
+            (this.$refs.sub_btn as HTMLElement).classList.remove('focus');
+            (this.$refs.sub_hint as HTMLElement).classList.add('is-opaque-0')
         },
         onSignup() {
             fbq('trackCustom', 'Sign Up')
@@ -220,8 +221,8 @@ export default defineComponent({
     data() {
         return {
             currentDate: new Date(),
-            targetDate: new Date('June 23, 2023')
-        }
+            targetDate: new Date('September 13, 2024')
+        };
     },
     computed: {
         displayDate() {
@@ -237,7 +238,7 @@ export default defineComponent({
             }
         }
     }
-})
+});
 </script>
 
 <style scoped lang="scss">

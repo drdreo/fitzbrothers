@@ -8,8 +8,8 @@
 
                     <ul style="margin-bottom: 30px">
                         <li>Florian und Felix Fitz</li>
-                        <li>Erzherzog-Karl-Straße 19A/1/6</li>
-                        <li>1220 Wien</li>
+                        <li>Engerthstraße 235/2/2</li>
+                        <li>1020 Wien</li>
                         <li>Österreich</li>
                     </ul>
 
@@ -302,20 +302,10 @@
                         <p>
                             Images:
                             <a
-                                href="http://www.kevin-v.com"
-                                target="_blank"
-                                >Kevin Vandenberghe</a
-                            >,
-                            <a
-                                href="http://wwww.janfrankl.com/"
-                                target="_blank"
-                                >Jan Frankl</a
-                            >,
-                            <a
-                                href="https://www.facebook.com/aaronjiangphotography/"
-                                target="_blank"
-                                >Aaron Jiang</a
-                            >
+                                href="https://lukasjohann.at/"
+                                target="_blank">
+                                Lukas Johann
+                            </a>
                         </p>
                     </div>
                     <hr />
@@ -414,46 +404,46 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
     head() {
         return {
-            title: 'Fitz Brothers (official) | Terms & Conditions'
-        }
+            title: "Fitz Brothers (official) | Terms & Conditions"
+        };
     },
     data() {
         return {
             errors: [] as string[],
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-        }
+            name: "",
+            email: "",
+            subject: "",
+            message: ""
+        };
     },
     methods: {
         checkForm(e: Event) {
-            e.preventDefault()
+            e.preventDefault();
 
-            this.errors = []
+            this.errors = [];
 
             if (!this.name) {
-                this.errors.push('Name is required.')
+                this.errors.push("Name is required.");
             }
 
             if (!this.email) {
-                this.errors.push('Email is required to get an answer.')
+                this.errors.push("Email is required to get an answer.");
             } else if (!this.validEmail(this.email)) {
-                this.errors.push('Email is not valid.')
+                this.errors.push("Email is not valid.");
             }
 
             if (!this.subject) {
                 this.errors.push(
-                    'Please enter a subject you want to talk about.'
-                )
+                    "Please enter a subject you want to talk about."
+                );
             }
             if (!this.message) {
-                this.errors.push('Please enter your message.')
+                this.errors.push("Please enter your message.");
             }
 
             if (!this.errors.length) {
@@ -462,34 +452,34 @@ export default defineComponent({
                     email: this.email,
                     subject: this.subject,
                     message: this.message
-                }
-                fetch('/ajax/ajax_contact_mail.php', {
-                    method: 'POST',
+                };
+                fetch("/ajax/ajax_contact_mail.php", {
+                    method: "POST",
                     headers: {
-                        'Content-Type': 'application/json'
+                        "Content-Type": "application/json"
                     },
                     body: JSON.stringify(data)
                 })
                     .then(async (res) => {
                         if (res.status === 204) {
-                            console.log('Email has been sent successfully!')
+                            console.log("Email has been sent successfully!");
                         } else if (res.status === 400) {
-                            const errorResponse = await res.json()
-                            this.errors.push(errorResponse.error)
+                            const errorResponse = await res.json();
+                            this.errors.push(errorResponse.error);
                         }
                     })
                     .catch((error) => {
-                        console.error('Error:', error)
-                    })
+                        console.error("Error:", error);
+                    });
             }
         },
         validEmail(email: string) {
             const re =
-                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-            return re.test(email)
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
         }
     }
-})
+});
 </script>
 
 <style scoped lang="scss">

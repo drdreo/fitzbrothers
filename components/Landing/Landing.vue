@@ -1,12 +1,12 @@
 <template>
     <div class="landing">
-        <div id="slogan" ref="slogan">
-            <img
-                src="~assets/images/surrender-to-the-music.svg"
-                type="image/svg+xml"
-                alt=""
-            />
-        </div>
+        <!--        <div id="slogan" ref="slogan">-->
+        <!--            <img-->
+        <!--                src="~assets/images/surrender-to-the-music.svg"-->
+        <!--                type="image/svg+xml"-->
+        <!--                alt=""-->
+        <!--            />-->
+        <!--        </div>-->
 
         <div id="logo">
             <logo />
@@ -15,19 +15,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import Logo from '~/components/Logo/Logo.vue'
+import { defineComponent } from "vue";
+import Logo from "~/components/Logo/Logo.vue";
 
 export default defineComponent({
     components: {
         Logo
     }
-})
+});
 </script>
 
 <style scoped lang="scss">
-@import '~/assets/styles/overrides.scss';
-@import 'bulma/sass/utilities/mixins.sass';
+@import "~/assets/styles/overrides.scss";
+@import "bulma/sass/utilities/mixins.sass";
 
 .landing {
     position: relative;
@@ -36,7 +36,7 @@ export default defineComponent({
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
-    background-image: url('~/assets/images/HomepageHeader.jpg');
+    background-image: url("~/assets/images/HomepageHeader.jpg");
     text-align: center;
     color: #fff;
 
@@ -69,13 +69,17 @@ export default defineComponent({
     filter: drop-shadow(0px 0px 5px #fff);
     vertical-align: middle;
 
-    width: 22vw;
+    width: 25vw;
     height: 22vw;
     min-height: 210px;
     min-width: 210px;
 
-    top: 10vw;
+    top: 15vw;
     left: 50%;
     transform: translateX(-50%);
+
+    @include mobile {
+        top: 15vh;
+    }
 }
 </style>
