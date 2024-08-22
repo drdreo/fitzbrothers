@@ -17,6 +17,9 @@ importers:
       vue-easy-lightbox:
         specifier: ^1.19.0
         version: 1.19.0(vue@3.4.31)
+      vue3-lazyload:
+        specifier: ^0.3.8
+        version: 0.3.8(vue@3.4.31)
     devDependencies:
       '@nuxt/devtools':
         specifier: latest
@@ -3099,6 +3102,17 @@ packages:
   vue-bundle-renderer@2.1.0:
     resolution: {integrity: sha512-uZ+5ZJdZ/b43gMblWtcpikY6spJd0nERaM/1RtgioXNfWFbjKlUwrS8HlrddN6T2xtptmOouWclxLUkpgcVX3Q==}
 
+  vue-demi@0.12.5:
+    resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==}
+    engines: {node: '>=12'}
+    hasBin: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+
   vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
 
@@ -3112,6 +3126,15 @@ packages:
     resolution: {integrity: sha512-HB+t2p611aIZraV2aPSRNXf0Z/oLZFrlygJm+sZbdJaW6lcFqEDQwnzUBXn+DApw+/QzDU/I9TeWx9izEjTmsA==}
     peerDependencies:
       vue: ^3.2.0
+
+  vue3-lazyload@0.3.8:
+    resolution: {integrity: sha512-UiJHRT7mzry102WbhtrRgJh+f8Z8u4Z+H1RU4dvPmQeq7wFSDFxZB9iJOWGihH2FscXN/8rMGLDOQJAmjwqpCg==}
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^2.0.0 || >=3.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
 
   vue@3.4.31:
     resolution: {integrity: sha512-njqRrOy7W3YLAlVqSKpBebtZpDVg21FPoaq1I7f/+qqBThK9ChAIjkRWgeP6Eat+8C+iia4P3OYqpATP21BCoQ==}
@@ -6505,6 +6528,10 @@ snapshots:
     dependencies:
       ufo: 1.5.3
 
+  vue-demi@0.12.5(vue@3.4.31):
+    dependencies:
+      vue: 3.4.31
+
   vue-devtools-stub@0.1.0: {}
 
   vue-easy-lightbox@1.19.0(vue@3.4.31):
@@ -6515,6 +6542,11 @@ snapshots:
     dependencies:
       '@vue/devtools-api': 6.6.3
       vue: 3.4.31
+
+  vue3-lazyload@0.3.8(vue@3.4.31):
+    dependencies:
+      vue: 3.4.31
+      vue-demi: 0.12.5(vue@3.4.31)
 
   vue@3.4.31:
     dependencies:

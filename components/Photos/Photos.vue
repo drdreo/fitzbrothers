@@ -1,5 +1,7 @@
 <template>
-    <section id="photos" class="section has-text-centered">
+    <section
+        id="photos"
+        class="section has-text-centered">
         <h2 class="title">Photos</h2>
         <hr />
 
@@ -7,18 +9,18 @@
             :visible="visibleRef"
             :imgs="images"
             :index="indexRef"
-            @hide="onHide"
-        ></vue-easy-lightbox>
+            @hide="onHide"></vue-easy-lightbox>
 
         <div class="gallery columns is-gapless">
             <div
                 class="column is-4"
                 v-for="(thumb, imageIndex) in thumbnails"
                 :key="imageIndex"
-                @click="() => showImg(imageIndex)"
-            >
+                @click="() => showImg(imageIndex)">
                 <figure class="image">
-                    <img :src="thumb" alt="Band Image" />
+                    <img
+                        v-lazy="thumb"
+                        alt="Band Image" />
                 </figure>
             </div>
         </div>
@@ -26,31 +28,29 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { ref } from 'vue'
-import VueEasyLightbox from 'vue-easy-lightbox'
-// import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
+import { defineComponent } from "vue";
+import { ref } from "vue";
+import VueEasyLightbox from "vue-easy-lightbox";
 
-const photo1 = 'images/gallery/left.jpg'
-const photo1_thumb = 'images/gallery/left_thumb.jpg'
-const photo2 = 'images/gallery/mid.jpg'
-const photo2_thumb = 'images/gallery/mid_thumb.jpg'
-const photo3 = 'images/gallery/right.jpg'
-const photo3_thumb = 'images/gallery/right_thumb.jpg'
+const photo1 = "images/gallery/left.jpg";
+const photo1_thumb = "images/gallery/left_thumb.jpg";
+const photo2 = "images/gallery/mid.jpg";
+const photo2_thumb = "images/gallery/mid_thumb.jpg";
+const photo3 = "images/gallery/right.jpg";
+const photo3_thumb = "images/gallery/right_thumb.jpg";
 
 export default defineComponent({
     components: {
         VueEasyLightbox
     },
     setup() {
-        const visibleRef = ref(false)
-        const indexRef = ref(0)
+        const visibleRef = ref(false);
+        const indexRef = ref(0);
         const showImg = (index: number) => {
-            console.log(index)
-            indexRef.value = index
-            visibleRef.value = true
-        }
-        const onHide = () => (visibleRef.value = false)
+            indexRef.value = index;
+            visibleRef.value = true;
+        };
+        const onHide = () => (visibleRef.value = false);
 
         return {
             visibleRef,
@@ -59,9 +59,9 @@ export default defineComponent({
             thumbnails: [photo1_thumb, photo2_thumb, photo3_thumb],
             showImg,
             onHide
-        }
+        };
     }
-})
+});
 </script>
 
 <style scoped lang="scss">
