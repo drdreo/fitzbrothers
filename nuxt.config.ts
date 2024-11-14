@@ -1,26 +1,26 @@
 export default defineNuxtConfig({
     app: {
         head: {
-            title: 'Fitz Brothers (official) | Surrender to the music',
+            title: "Fitz Brothers (official) | Surrender to the music",
             meta: [
-                { name: 'author', content: 'Andreas K. Hahn' },
+                { name: "author", content: "Andreas K. Hahn" },
                 {
-                    name: 'keywords',
+                    name: "keywords",
                     content:
-                        'Band, fitz, FITZ, F-I-T-Z, FITZ!, Austrian Band, Fitz Brothers'
+                        "Band, fitz, FITZ, F-I-T-Z, FITZ!, Austrian Band, Fitz Brothers"
                 },
                 {
-                    name: 'description',
+                    name: "description",
                     content:
-                        'This is the official Fitz Brothers website. Surrender to the music.'
+                        "This is the official Fitz Brothers website. Surrender to the music."
                 }
             ],
-            link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+            link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
             script: [
                 {
-                    src: '/js/pixel.js',
+                    src: "/js/pixel.js",
                     // valid options are: 'head' | 'bodyClose' | 'bodyOpen'
-                    tagPosition: 'head'
+                    tagPosition: "head"
                 },
                 {
                     innerHTML:
@@ -32,7 +32,7 @@ export default defineNuxtConfig({
                 {
                     innerHTML: `<img height="1" width="1" style="display:none" 
      src="https://www.facebook.com/tr?id=1060878250708992&ev=PageView&noscript=1"/>`,
-                    tagPosition: 'bodyClose'
+                    tagPosition: "bodyClose"
                 }
             ]
         }
@@ -41,12 +41,12 @@ export default defineNuxtConfig({
     /*
      ** Global CSS
      */
-    css: ['~/assets/styles/main.scss', '~/assets/styles/sendInBlue.css'],
+    css: ["~/assets/styles/main.scss", "~/assets/styles/sendInBlue.css"],
 
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: [{ src: '~/plugins/reveal' }],
+    plugins: [{ src: "~/plugins/reveal" }],
 
     /*
      ** Nuxt.js modules
@@ -62,5 +62,15 @@ export default defineNuxtConfig({
      */
     build: {},
 
-    compatibilityDate: '2024-07-08'
-})
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    quietDeps: true
+                }
+            }
+        }
+    },
+
+    compatibilityDate: "2024-07-08"
+});

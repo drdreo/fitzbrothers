@@ -3,7 +3,9 @@
         <p class="is-size-7">
             <span>Fitz Brothers</span>
             <span class="seperator">|</span>
-            <NuxtLink class="link" to="/termsandconditions"
+            <NuxtLink
+                class="link"
+                to="/termsandconditions"
                 >Terms & Conditions / Data Privacy</NuxtLink
             >
         </p>
@@ -11,13 +13,13 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
-export default defineComponent({})
+export default defineComponent({});
 </script>
 
 <style scoped lang="scss">
-@import '~/assets/styles/overrides.scss';
+@use "~/assets/styles/overrides" as vars;
 
 .footer {
     margin: 15px;
@@ -32,7 +34,7 @@ export default defineComponent({})
 }
 
 .link {
-    color: $gold;
+    color: vars.$gold;
 
     &:hover {
         text-decoration: underline;

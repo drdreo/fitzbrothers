@@ -1,46 +1,46 @@
-@import "./fonts";
-
-@import "./overrides";
+@use "./fonts";
+@use "./overrides";
 
 /* Import the rest of Bulma */
-@import "bulma/sass/base/all";
-@import "bulma/sass/components/navbar";
-@import "bulma/sass/elements/container";
-@import "bulma/sass/elements/title";
-@import "bulma/sass/elements/image";
-@import "bulma/sass/elements/button";
-@import "bulma/sass/grid/columns";
-@import "bulma/sass/helpers/all";
-@import "bulma/sass/layout/section";
-@import "bulma/sass/form/_all";
+@forward "bulma/sass/base";
+@forward "bulma/sass/elements/image";
+@forward "bulma/sass/elements/button";
+@forward "bulma/sass/grid/columns";
+@forward "bulma/sass/helpers";
+@forward "bulma/sass/layout/container";
+@forward "bulma/sass/layout/section";
+@forward "bulma/sass/form";
 
+@use "bulma/sass/utilities/initial-variables" as bulmaVars;
+// Import the themes so that all CSS variables have a value
+@forward "bulma/sass/themes";
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 // Custom Styles start here
 .is-transparent {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .is-opaque-0 {
-  opacity: 0;
+    opacity: 0;
 }
 
 hr {
-  height: 0;
-  box-sizing: content-box;
-  margin: 20px auto;
-  border: 3px #daa520;
-  border-top-style: solid;
-  max-width: 50px;
+    height: 0;
+    box-sizing: content-box;
+    margin: 20px auto;
+    border: 3px #daa520;
+    border-top-style: solid;
+    max-width: 50px;
 }
 
 .has-text-centered {
-  text-align: center;
+    text-align: center;
 }
 
 .has-text-white {
-	color: $white;
+    color: bulmaVars.$white;
 }

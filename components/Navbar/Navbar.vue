@@ -93,8 +93,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import "~/assets/styles/overrides.scss";
-@import "bulma/sass/utilities/mixins.sass";
+@use "~/assets/styles/overrides";
+@use "bulma/sass/utilities/mixins" as mixins;
+@use "bulma/sass/utilities/initial-variables" as bulmaVars;
 
 .navbar {
     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.15);
@@ -111,7 +112,7 @@ export default defineComponent({
         font-size: 18px;
     }
 
-    @include tablet {
+    @include mixins.tablet {
         .bandname {
             font-size: 14px;
         }
@@ -124,7 +125,7 @@ export default defineComponent({
             font-size: 18px;
         }
 
-        @include tablet {
+        @include mixins.tablet {
             background-color: transparent;
             .navbar-item {
                 color: #ffffffb3;
@@ -132,7 +133,7 @@ export default defineComponent({
 
                 &.is-active,
                 &:hover {
-                    color: $white;
+                    color: bulmaVars.$white;
                 }
             }
         }

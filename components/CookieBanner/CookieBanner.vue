@@ -1,20 +1,34 @@
 <template>
-    <div class="cookie-banner" v-if="!isConsent">
+    <div
+        class="cookie-banner"
+        v-if="!isConsent">
         <div class="cookie-banner__container is-hidden-mobile">
-            <div class="cta" @click="consent">X</div>
+            <div
+                class="cta"
+                @click="consent">
+                X
+            </div>
             <p>
                 This website uses cookies to give you an incredible experience.
                 By using this website you agree to our
-                <NuxtLink to="/termsandconditions" class="link"
+                <NuxtLink
+                    to="/termsandconditions"
+                    class="link"
                     >Terms & Conditions / Data Privacy</NuxtLink
                 >
             </p>
         </div>
         <div class="cookie-banner__container is-hidden-tablet">
-            <div class="cta" @click="consent">X</div>
+            <div
+                class="cta"
+                @click="consent">
+                X
+            </div>
             <p>
                 This website uses cookies,
-                <NuxtLink to="/termsandconditions" class="link"
+                <NuxtLink
+                    to="/termsandconditions"
+                    class="link"
                     >Terms / Privacy.</NuxtLink
                 >
             </p>
@@ -23,41 +37,41 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
-declare const fbq: Function
+declare const fbq: Function;
 
-const PIXEL_ID = '1060878250708992'
+const PIXEL_ID = "1060878250708992";
 
 export default defineComponent({
     data() {
         return {
             isConsent: true
-        }
+        };
     },
     mounted() {
-        this.isConsent = localStorage.getItem('cookie-consent') === 'true'
+        this.isConsent = localStorage.getItem("cookie-consent") === "true";
 
         if (this.isConsent) {
             setTimeout(() => {
-                fbq('init', PIXEL_ID)
-                fbq('track', 'PageView')
-            }, 3000)
+                fbq("init", PIXEL_ID);
+                fbq("track", "PageView");
+            }, 3000);
         }
     },
     methods: {
         consent() {
-            localStorage.setItem('cookie-consent', 'true')
-            this.isConsent = true
-            fbq('init', PIXEL_ID)
-            fbq('track', 'PageView')
+            localStorage.setItem("cookie-consent", "true");
+            this.isConsent = true;
+            fbq("init", PIXEL_ID);
+            fbq("track", "PageView");
         }
     }
-})
+});
 </script>
 
 <style scoped lang="scss">
-@import '~/assets/styles/overrides.scss';
+@use "~/assets/styles/overrides" as overrides;
 
 .cookie-banner {
     &__container {
@@ -77,13 +91,13 @@ export default defineComponent({
     }
 
     .cta {
-        color: $gold;
+        color: overrides.$gold;
         cursor: pointer;
         margin: 0 1rem;
     }
 
     .link {
-        color: $gold;
+        color: overrides.$gold;
     }
 }
 </style>

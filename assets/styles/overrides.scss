@@ -1,38 +1,40 @@
 /* Import Bulma Utilities */
 
-@import 'bulma/sass/utilities/all';
-
-/* Variable changes go here */
-// Colours
-$primary: #d0eeed;
-$secondary: #d0e0ee;
-
-
+$tablet-bp: 768px;
 // Add my gold and its invert
 $gold: #daa520;
-$gold-invert: findColorInvert($gold);
-
-// Breakpoints
-$tablet: 768px;
-
-// Add Moon font
-$family-primary: Hero, "Helvetica Neue", "Arial", sans-serif;
-$text: #333;
-
-// Navbar
-$navbar-item-hover-color: $gold;
-$navbar-item-hover-background-color: transparent;
-$navbar-breakpoint: $tablet;
-
-// Title
-$title-weight: 500;
-$title-family: Moon, "Helvetica Neue", "Arial", sans-serif;
-$subtitle-family: $title-family;
-
-// Add new color variables to the color map.
-@import "bulma/sass/utilities/derived-variables";
-$addColors: (
-        "gold":($gold, $gold-invert)
+$gold-invert: white;
+@use "bulma/sass/utilities" as bulmaUtils with (
+    $family-primary: '"Hero", "Helvetica Neue", "Arial", sans-serif',
+    // Colours
+    $primary: #d0eeed,
+    //$secondary: #d0e0ee,
+    // Breakpoints
+    $tablet: $tablet-bp,
+    // Add Moon font
+    $text: #333,
+    $custom-colors: (
+        "gold": (
+            $gold,
+            $gold-invert
+        )
+    ),
+    $link: $gold
 );
 
-$colors: map-merge($colors, $addColors);
+@use "bulma/sass/components/navbar" with (
+    //$navbar-item-hover-color: $gold,
+    //$navbar-item-hover-background-color: transparent,
+    $navbar-breakpoint: $tablet-bp,
+);
+
+// Title
+@use "bulma/sass/elements/title" with (
+    $title-weight: 500,
+    $title-family: '"Moon", "Helvetica Neue", "Arial", sans-serif',
+    $subtitle-family: '"Moon", "Helvetica Neue", "Arial", sans-serif'
+);
+
+.navbar-item:hover {
+  --bulma-navbar-item-color: #{$gold};
+}

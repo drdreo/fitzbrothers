@@ -64,7 +64,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/styles/overrides.scss";
+@use "~/assets/styles/overrides" as overrides;
 
 .social-platform {
     display: flex;
@@ -73,10 +73,10 @@ export default defineComponent({
     align-items: center;
     height: 100%;
 
-    color: $black;
+    color: var(--bulma-text);
 
     &:hover {
-        color: $gold;
+        color: overrides.$gold;
     }
 
     &__icon {

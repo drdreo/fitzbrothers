@@ -26,8 +26,8 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/styles/overrides.scss";
-@import "bulma/sass/utilities/mixins.sass";
+@use "~/assets/styles/overrides.scss";
+@use "bulma/sass/utilities/mixins.scss" as mixins;
 
 .landing {
     position: relative;
@@ -40,7 +40,7 @@ export default defineComponent({
     text-align: center;
     color: #fff;
 
-    @include mobile {
+    @include mixins.mobile {
         height: 60vh;
         margin-top: 40px;
     }
@@ -57,7 +57,7 @@ export default defineComponent({
     top: calc(35% + calc(100vw * 0.2));
     left: calc(50vw + (calc(100vw * 0.22) / 1.2));
 
-    @include mobile {
+    @include mixins.mobile {
         width: calc(30vw);
         height: calc(30vw);
     }
@@ -78,7 +78,7 @@ export default defineComponent({
     left: 50%;
     transform: translateX(-50%);
 
-    @include mobile {
+    @include mixins.mobile {
         top: 15vh;
     }
 }
