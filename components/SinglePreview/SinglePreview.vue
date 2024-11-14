@@ -26,6 +26,7 @@
                     <div class="cell">
                         <figure class="image is-2by1">
                             <iframe
+                                title="YouTube video player"
                                 class="has-ratio"
                                 width="2100"
                                 height="890"
@@ -35,6 +36,7 @@
                     <div class="cell">
                         <figure class="image is-2by1">
                             <iframe
+                                title="YouTube video player"
                                 class="has-ratio"
                                 width="2100"
                                 height="890"
@@ -44,6 +46,7 @@
                     <div class="cell">
                         <figure class="image is-2by1">
                             <iframe
+                                title="YouTube video player"
                                 class="has-ratio"
                                 width="2100"
                                 height="890"
@@ -53,6 +56,7 @@
                     <div class="cell">
                         <figure class="image is-2by1">
                             <iframe
+                                title="YouTube video player"
                                 class="has-ratio"
                                 width="2100"
                                 height="890"

@@ -2,6 +2,9 @@ export default defineNuxtConfig({
     app: {
         head: {
             title: "Fitz Brothers (official) | Surrender to the music",
+            htmlAttrs: {
+                lang: "en"
+            },
             meta: [
                 { name: "author", content: "Andreas K. Hahn" },
                 {
