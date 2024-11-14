@@ -21,13 +21,54 @@
             <hr style="margin-bottom: 2.5rem; margin-top: 2rem" />
 
             <!--Musicvideo-->
-            <figure class="image is-2by1">
-                <iframe
-                    class="has-ratio"
-                    width="2100"
-                    height="890"
-                    src="https://www.youtube-nocookie.com/embed/h_iDgBmaRjE?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>
-            </figure>
+            <div class="fixed-grid has-1-cols-mobile">
+                <div class="grid">
+                    <div class="cell">
+                        <figure class="image is-2by1">
+                            <iframe
+                                class="has-ratio"
+                                width="2100"
+                                height="890"
+                                src="https://www.youtube-nocookie.com/embed/h_iDgBmaRjE?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>
+                        </figure>
+                    </div>
+                    <div class="cell">
+                        <figure class="image is-2by1">
+                            <iframe
+                                class="has-ratio"
+                                width="2100"
+                                height="890"
+                                src="https://www.youtube-nocookie.com/embed/DRwTLODQMag?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>
+                        </figure>
+                    </div>
+                    <div class="cell">
+                        <figure class="image is-2by1">
+                            <iframe
+                                class="has-ratio"
+                                width="2100"
+                                height="890"
+                                src="https://www.youtube-nocookie.com/embed/bZi4NrpQp8s?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>
+                        </figure>
+                    </div>
+                    <div class="cell">
+                        <figure class="image is-2by1">
+                            <iframe
+                                class="has-ratio"
+                                width="2100"
+                                height="890"
+                                src="https://www.youtube-nocookie.com/embed/1zq0qGOK0Vk?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!--            <figure class="image is-2by1">-->
+            <!--                <iframe-->
+            <!--                    class="has-ratio"-->
+            <!--                    width="2100"-->
+            <!--                    height="890"-->
+            <!--                    src="https://www.youtube-nocookie.com/embed/h_iDgBmaRjE?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>-->
+            <!--            </figure>-->
 
             <section class="section cta">
                 <a
@@ -177,8 +218,8 @@
                                     <NuxtLink
                                         class="link"
                                         to="/termsandconditions"
-                                        >Terms & Conditions</NuxtLink
-                                    >
+                                        >Terms & Conditions
+                                    </NuxtLink>
                                 </small>
                             </div>
 

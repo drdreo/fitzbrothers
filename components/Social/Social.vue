@@ -66,6 +66,13 @@ export default defineComponent({
 <style scoped lang="scss">
 @use "~/assets/styles/overrides" as overrides;
 
+@media (prefers-color-scheme: dark) {
+    .social-platform__icon {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg)
+            brightness(100%) contrast(100%);
+    }
+}
+
 .social-platform {
     display: flex;
     flex-direction: column;
