@@ -316,7 +316,7 @@
                             href="//andreas-hahn.at"
                             target="_blank"
                             >Andreas K. Hahn</a
-                        >, Logo and Animations by
+                        >, Logo by
                         <a
                             href="//moritzkertesz.com"
                             target="_blank"
