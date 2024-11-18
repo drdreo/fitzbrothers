@@ -27,33 +27,38 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import facebookLogo from "~/assets/images/social/facebook.png";
+import instagramLogo from "~/assets/images/social/instagram.png";
+import youtubeLogo from "~/assets/images/social/youtube.png";
+import tiktokLogo from "~/assets/images/social/tiktok.svg";
+import emailLogo from "~/assets/images/social/email.svg";
 
 export default defineComponent({
     data() {
         return {
             socialLinks: [
                 {
-                    icon: "images/social/facebook.png",
+                    icon: facebookLogo,
                     tag: "@fitzbrothers",
                     url: "https://facebook.com/fitzbrothers"
                 },
                 {
-                    icon: "images/social/instagram.png",
+                    icon: instagramLogo,
                     tag: "@fitzbrothersmusic",
                     url: "https://instagram.com/fitzbrothersmusic/"
                 },
                 {
-                    icon: "images/social/youtube.png",
+                    icon: youtubeLogo,
                     tag: "@FITZBros",
                     url: "https://youtube.com/@FITZBros"
                 },
                 {
-                    icon: "images/social/tiktok.svg",
+                    icon: tiktokLogo,
                     tag: "@FITZBrothers",
                     url: "https://tiktok.com/@FITZBrothers"
                 },
                 {
-                    icon: "images/social/email.svg",
+                    icon: emailLogo,
                     tag: "info@fitz-bros.com",
                     url: "mailto:info@fitz-bros.com"
                 }

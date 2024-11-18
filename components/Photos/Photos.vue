@@ -32,12 +32,12 @@ import { defineComponent } from "vue";
 import { ref } from "vue";
 import VueEasyLightbox from "vue-easy-lightbox";
 
-const photo1 = "images/gallery/left.jpg";
-const photo1_thumb = "images/gallery/left_thumb.jpg";
-const photo2 = "images/gallery/mid.jpg";
-const photo2_thumb = "images/gallery/mid_thumb.jpg";
-const photo3 = "images/gallery/right.jpg";
-const photo3_thumb = "images/gallery/right_thumb.jpg";
+import photo1 from "~/assets/images/gallery/left.jpg";
+import photo1_thumb from "~/assets/images/gallery/left_thumb.jpg";
+import photo2 from "~/assets/images/gallery/mid.jpg";
+import photo2_thumb from "~/assets/images/gallery/mid_thumb.jpg";
+import photo3 from "~/assets/images/gallery/right.jpg";
+import photo3_thumb from "~/assets/images/gallery/right_thumb.jpg";
 
 export default defineComponent({
     components: {

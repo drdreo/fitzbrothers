@@ -67,18 +67,16 @@
             </div>
 
             <section class="section cta">
-                <div>
-                    <a
-                        v-for="(store, index) in musicStores"
-                        :key="index"
-                        :href="store.href"
-                        target="_blank"
-                        :title="store.title">
-                        <img
-                            :src="store.src"
-                            :alt="store.title" />
-                    </a>
-                </div>
+                <a
+                    v-for="(store, index) in musicStores"
+                    :key="index"
+                    :href="store.href"
+                    target="_blank"
+                    :title="store.title">
+                    <img
+                        :src="store.src"
+                        :alt="store.title" />
+                </a>
             </section>
 
             <section class="section signup">
@@ -276,8 +274,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .cta {
-    gap: var(--bulma-column-gap);
-    justify-content: center;
+    text-align: center;
 
     a {
         display: inline-block;

@@ -7,20 +7,22 @@
     "scripts": {
         "start": "nuxt dev",
         "build": "nuxt build",
+        "generate": "nuxt generate",
         "preview": "nuxt preview",
-        "postinstall": "nuxt prepare",
-        "generate": "nuxt generate"
+        "postinstall": "nuxt prepare"
     },
     "dependencies": {
         "bulma": "^1.0.2",
         "sass": "^1.77.8",
-        "vite-plugin-image-optimizer": "^1.1.8",
         "vue-easy-lightbox": "^1.19.0",
         "vue3-lazyload": "^0.3.8"
     },
     "devDependencies": {
         "@nuxt/devtools": "latest",
         "nuxt": "^3.14.3",
-        "prettier": "^3.3.3"
+        "prettier": "^3.3.3",
+        "sharp": "^0.33.5",
+        "svgo": "^3.3.2",
+        "vite-plugin-image-optimizer": "^1.1.8"
     }
 }

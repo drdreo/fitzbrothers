@@ -68,7 +68,13 @@ export default defineNuxtConfig({
     build: {},
 
     vite: {
-        plugins: [ViteImageOptimizer()],
+        plugins: [
+            ViteImageOptimizer({
+                jpg: {
+                    quality: 80
+                }
+            })
+        ],
         css: {
             preprocessorOptions: {
                 scss: {
