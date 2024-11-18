@@ -1,3 +1,5 @@
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+
 export default defineNuxtConfig({
     app: {
         head: {
@@ -66,6 +68,7 @@ export default defineNuxtConfig({
     build: {},
 
     vite: {
+        plugins: [ViteImageOptimizer()],
         css: {
             preprocessorOptions: {
                 scss: {
