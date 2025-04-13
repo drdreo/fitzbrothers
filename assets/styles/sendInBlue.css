@@ -1,14 +1,14 @@
 div#sib_embed_signup .needsfilled input {
-    border-color: #B94A48 !important;
-    color: #B94A48 !important;
+    border-color: #b94a48 !important;
+    color: #b94a48 !important;
 }
 
 div#sib_embed_signup .needsfilled {
-    color: #B94A48 !important;
+    color: #b94a48 !important;
 }
 
 div#sib_embed_signup input[type="text"] {
-    border: 1px solid #CCCCCC;
+    border: 1px solid #cccccc;
     border-radius: 4px 0 0 4px;
 }
 
@@ -59,7 +59,7 @@ div#sib_embed_signup div.message_area button.close {
 
 .tooltip:hover:after {
     background: #333;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     color: #fff;
     content: attr(data-title);
@@ -92,15 +92,19 @@ div#sib_embed_signup .sib-container {
 }
 
 div#sib_embed_signup .sib-container h1 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-div#sib_embed_signup .sib-container .forms-builder-footer, div#sib_embed_signup .sib-container .description, div#sib_embed_signup .sib-container .fake-label, div#sib_embed_signup .sib-container .row, div#sib_embed_signup .sib-container #company-name {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+div#sib_embed_signup .sib-container .forms-builder-footer,
+div#sib_embed_signup .sib-container .description,
+div#sib_embed_signup .sib-container .fake-label,
+div#sib_embed_signup .sib-container .row,
+div#sib_embed_signup .sib-container #company-name {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 div#sib_embed_signup .sib-container .button {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 div#sib_embed_signup .sib-containter h1 {

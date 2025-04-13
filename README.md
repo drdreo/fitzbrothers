@@ -3,6 +3,7 @@
 > The portfolio page of fitzbrothers
 
 # Assets vs Public
+
 Assets for build time stuff.
 Public for static stuff
 

@@ -25,7 +25,7 @@ $gold-invert: white;
 @use "bulma/sass/components/navbar" with (
     //$navbar-item-hover-color: $gold,
     //$navbar-item-hover-background-color: transparent,
-    $navbar-breakpoint: $tablet-bp,
+    $navbar-breakpoint: $tablet-bp
 );
 
 // Title
@@ -36,5 +36,5 @@ $gold-invert: white;
 );
 
 .navbar-item:hover {
-  --bulma-navbar-item-color: #{$gold};
+    --bulma-navbar-item-color: #{$gold};
 }
