@@ -50,9 +50,17 @@
                     class="page-scroll navbar-item"
                     v-reveal="1000"
                     style="opacity: 0"
-                    href="#contact"
-                    >Contact</a
-                >
+                    href="#contact">
+                    Contact
+                </a>
+
+                <a
+                    class="page-scroll navbar-item"
+                    v-reveal="1000"
+                    style="opacity: 0"
+                    href="/epk">
+                    EPK
+                </a>
             </div>
         </div>
     </nav>

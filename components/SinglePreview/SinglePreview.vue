@@ -18,53 +18,18 @@
                 </div>
             </div>
 
-            <hr style="margin-bottom: 2.5rem; margin-top: 2rem" />
+            <section
+                class="section has-text-centered"
+                id="tour">
+                <h2 class="title is-4">Tour Dates</h2>
+                <hr />
+                <TourDates
+                    :tourDates="tourDates"
+                    :on-main-page="true" />
+            </section>
 
-            <!--Musicvideo-->
-            <div class="fixed-grid has-1-cols-mobile">
-                <div class="grid">
-                    <div class="cell">
-                        <figure class="image is-2by1">
-                            <iframe
-                                title="YouTube video player"
-                                class="has-ratio"
-                                width="2100"
-                                height="890"
-                                src="https://www.youtube-nocookie.com/embed/sGMhqbUhA4E?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>
-                        </figure>
-                    </div>
-                    <div class="cell">
-                        <figure class="image is-2by1">
-                            <iframe
-                                title="YouTube video player"
-                                class="has-ratio"
-                                width="2100"
-                                height="890"
-                                src="https://www.youtube-nocookie.com/embed/DRwTLODQMag?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>
-                        </figure>
-                    </div>
-                    <div class="cell">
-                        <figure class="image is-2by1">
-                            <iframe
-                                title="YouTube video player"
-                                class="has-ratio"
-                                width="2100"
-                                height="890"
-                                src="https://www.youtube-nocookie.com/embed/LJjs8v8kle0?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>
-                        </figure>
-                    </div>
-                    <div class="cell">
-                        <figure class="image is-2by1">
-                            <iframe
-                                title="YouTube video player"
-                                class="has-ratio"
-                                width="2100"
-                                height="890"
-                                src="https://www.youtube-nocookie.com/embed/aHxVqtoO8R0?controls=0&showinfo=0&vq=hd1080&playsinline=1"></iframe>
-                        </figure>
-                    </div>
-                </div>
-            </div>
+            <!-- Music Video Section -->
+            <YouTubeGrid :videos="musicVideos" />
 
             <section class="section cta">
                 <a
@@ -191,6 +156,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { tourDates } from "@/data/tourDates";
+import YouTubeGrid from "@/components/YouTubeGrid.vue";
 import itunesIcon from "~/assets/images/ctas/itunes.svg";
 import amazonIcon from "~/assets/images/ctas/amazon.svg";
 import deezerIcon from "~/assets/images/ctas/deezer.svg";
@@ -200,6 +167,9 @@ import soundCloudIcon from "~/assets/images/ctas/soundcloud.png";
 declare const fbq: Function;
 
 export default defineComponent({
+    components: {
+        YouTubeGrid
+    },
     mounted() {
         const script = document.createElement("script");
         script.src =
@@ -226,6 +196,7 @@ export default defineComponent({
         return {
             currentDate: new Date(),
             targetDate: new Date("September 13, 2024"),
+            tourDates,
             musicStores: [
                 {
                     href: "https://music.apple.com/at/artist/fitz-brothers/1506988785?l=en",
@@ -251,6 +222,24 @@ export default defineComponent({
                     href: "https://soundcloud.com/fitzbrothers",
                     title: "Listen on Soundcloud",
                     src: soundCloudIcon
+                }
+            ],
+            musicVideos: [
+                {
+                    title: "Video 1",
+                    url: "https://www.youtube-nocookie.com/embed/K2StlfCk-Xs?controls=0&showinfo=0&vq=hd1080&playsinline=1"
+                },
+                {
+                    title: "Video 2",
+                    url: "https://www.youtube-nocookie.com/embed/sGMhqbUhA4E?controls=0&showinfo=0&vq=hd1080&playsinline=1"
+                },
+                {
+                    title: "Video 3",
+                    url: "https://www.youtube-nocookie.com/embed/LJjs8v8kle0?controls=0&showinfo=0&vq=hd1080&playsinline=1"
+                },
+                {
+                    title: "Video 4",
+                    url: "https://www.youtube-nocookie.com/embed/aHxVqtoO8R0?controls=0&showinfo=0&vq=hd1080&playsinline=1"
                 }
             ]
         };
