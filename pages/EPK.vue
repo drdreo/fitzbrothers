@@ -162,9 +162,6 @@ import photo5 from "~/assets/images/epk/5.jpg";
 import photo5_thumb from "~/assets/images/epk/5.jpg";
 import photo6 from "~/assets/images/epk/6.jpg";
 
-import liveVideo1 from "~/assets/videos/GOLDEN_TREES_live.mov";
-import liveVideo2 from "~/assets/videos/so_many_times_live.mov";
-import liveVideo3 from "~/assets/videos/worth_your_while_live.mp4";
 import { showDates } from "~/data/dates";
 
 export default {
@@ -205,17 +202,12 @@ export default {
                 }
             ],
             liveItems: [
-                // ...existing data...
                 {
-                    source: liveVideo1,
-                    title: "Golden Trees live"
-                },
-                {
-                    source: liveVideo2,
+                    source: "http://fitzbrothers.at/static/videos/so_many_times_live.mov",
                     title: "So Many Times live"
                 },
                 {
-                    source: liveVideo3,
+                    source: "http://fitzbrothers.at/static/videos/worth_your_while_live.mp4",
                     title: "Worth Your While live"
                 }
             ],
