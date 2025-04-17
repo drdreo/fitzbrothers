@@ -6,7 +6,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
 
         <div class="navbar-brand">
-                <Logo id="logo" />
+            <Logo id="logo" />
 
             <a
                 class="navbar-item bandname"
@@ -113,18 +113,14 @@ export default defineComponent({
 @use "bulma/sass/utilities/mixins" as mixins;
 @use "bulma/sass/utilities/initial-variables" as bulmaVars;
 
-
 #logo {
-
     filter: drop-shadow(0px 0px 5px #fff);
     vertical-align: middle;
 
     width: 50px;
     height: 50px;
-    min-height: 50px;;
-    min-width: 50px;;
-
-
+    min-height: 50px;
+    min-width: 50px;
 }
 
 .navbar {
