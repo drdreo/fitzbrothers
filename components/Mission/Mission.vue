@@ -1,5 +1,7 @@
 <template>
-    <section id="mission" class="section">
+    <section
+        id="mission"
+        class="section">
         <div class="container has-text-white has-text-centered">
             <h2 class="title has-text-white">Our Mission</h2>
             <hr />
@@ -19,14 +21,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
-export default defineComponent({})
+export default defineComponent({});
 </script>
 
 <style scoped lang="scss">
 .section {
-    background-image: url('~/assets/images/puppet.jpg');
+    background-image: url("~/assets/images/puppet.jpg");
     background-size: cover;
 }
 </style>

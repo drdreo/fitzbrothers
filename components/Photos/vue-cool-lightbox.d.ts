@@ -1,2 +1,1 @@
-declare module 'vue-cool-lightbox' {
-}
+declare module "vue-cool-lightbox" {}

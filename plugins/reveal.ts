@@ -1,14 +1,14 @@
 export default defineNuxtPlugin(({ vueApp }) => {
-    vueApp.directive('reveal', {
+    vueApp.directive("reveal", {
         beforeMount(el: HTMLElement, _) {
-            el.style.opacity = '0'
+            el.style.opacity = "0";
         },
         mounted(el, binding) {
-            let duration = binding.value || 0
+            let duration = binding.value || 0;
 
             setTimeout(() => {
-                el.style.opacity = '1'
-            }, duration)
+                el.style.opacity = "1";
+            }, duration);
         }
-    })
-})
+    });
+});
