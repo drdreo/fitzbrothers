@@ -7,8 +7,10 @@
                     <p class="subtitle is-6 is-uppercase">{{ displayDate }}</p>
 
                     <div class="columns">
-                        <div class="column is-6 is-offset-3">
-                            <figure class="image is-square">
+                        <div class="column is-6 is-offset-3 is-centered">
+                            <figure
+                                class="image is-square"
+                                style="max-width: 350px; margin: auto">
                                 <img
                                     src="~assets/images/single_cover.jpg"
                                     alt="Single Cover" />
@@ -21,11 +23,13 @@
             <section
                 class="section has-text-centered"
                 id="tour">
-                <h2 class="title is-4">Tour Dates</h2>
+                <h2 class="title is-4">Upcoming Shows</h2>
                 <hr />
                 <TourDates
-                    :tourDates="tourDates"
+                    :showDates="showDates"
                     :on-main-page="true" />
+                <hr />
+
             </section>
 
             <!-- Music Video Section -->
@@ -156,7 +160,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { tourDates } from "@/data/tourDates";
+import { showDates } from "~/data/dates";
 import YouTubeGrid from "@/components/YouTubeGrid.vue";
 import itunesIcon from "~/assets/images/ctas/itunes.svg";
 import amazonIcon from "~/assets/images/ctas/amazon.svg";
@@ -196,7 +200,7 @@ export default defineComponent({
         return {
             currentDate: new Date(),
             targetDate: new Date("September 13, 2024"),
-            tourDates,
+            showDates,
             musicStores: [
                 {
                     href: "https://music.apple.com/at/artist/fitz-brothers/1506988785?l=en",
@@ -247,7 +251,7 @@ export default defineComponent({
     computed: {
         displayDate() {
             if (this.currentDate > this.targetDate) {
-                return "Out now";
+                return "Half Past Five"; // "Out now";
             } else {
                 // Format the target date according to your requirements
                 return this.targetDate.toLocaleDateString("en-US", {

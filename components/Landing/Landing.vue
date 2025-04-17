@@ -8,9 +8,9 @@
         <!--            />-->
         <!--        </div>-->
 
-        <div id="logo">
-            <logo />
-        </div>
+        <!--        <div id="logo">-->
+        <!--            <logo />-->
+        <!--        </div>-->
     </div>
 </template>
 
@@ -36,13 +36,14 @@ export default defineComponent({
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
-    background-image: url("~/assets/images/HomepageHeader.jpg");
+    background-image: url("~/assets/images/new/main-min.jpg");
     text-align: center;
     color: #fff;
 
     @include mixins.mobile {
         height: 60vh;
         margin-top: 40px;
+        background-position-x: -180px; // tmp fix for that image
     }
 }
 
@@ -63,6 +64,25 @@ export default defineComponent({
     }
 }
 
+#logo {
+    position: absolute;
+
+    filter: drop-shadow(0px 0px 5px #fff);
+    vertical-align: middle;
+
+    width: 25vw;
+    height: 22vw;
+    min-height: 210px;
+    min-width: 210px;
+
+    top: 15vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mixins.mobile {
+        top: 15vh;
+    }
+}
 #logo {
     position: absolute;
 

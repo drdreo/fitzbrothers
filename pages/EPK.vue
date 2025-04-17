@@ -19,23 +19,29 @@
                 </div>
                 <div class="column">
                     <p class="content">
-                        Fitz Brothers is a [genre] band from Austria, Vienna,
-                        known for their [unique style/characteristic]. Formed in
-                        [year], the group has been making waves in the
-                        [local/national/international] music scene with their
-                        distinctive sound that blends elements of [musical
-                        influences].
+                        Great passion, red beards and a common vision. That’s
+                        what connects the two brothers from northern Austria,
+                        Florian Sebastian and Felix Fitz.
+                    </p>
+                    <p class="content my-2">
+                        After several individual musical projects, partly solo,
+                        partly in different bands, the two have now released
+                        several singles together (“Golden Trees”, “Sunday”,
+                        “Groggy”, etc.) and developed more and more their very
+                        own sound. Stylistically, the duo moves somewhere
+                        between pop and indie, difficult to pin down, but
+                        therefore all the more exciting. In any case, they are
+                        always about more than just nice music - they’re about
+                        feelings, passion and the human condition.
                     </p>
                     <p class="content">
-                        The band consists of Felix and Florian Fitz. Drawing
-                        inspiration from artists like [influential artists],
-                        they create music that [describe your sound/vibe].
-                    </p>
-                    <p class="content">
-                        Career highlights include [performances, achievements,
-                        or collaborations]. Their most recent release, "[latest
-                        release]", showcases the band's evolution and [describe
-                        what makes it special].
+                        In their own words: “Music has always been our way to
+                        sort out our thoughts and confront our emotions. It's a
+                        way of growing and helping others grow into greater
+                        human beings. We hope we can inspire you and give you
+                        some sort of experience that gets you more in touch with
+                        yourself. That’s what music has always done. That’s what
+                        it does for us.”
                     </p>
                 </div>
             </div>
@@ -47,7 +53,7 @@
             id="music">
             <h2 class="title is-4">Music</h2>
             <hr class="mx-0" />
-            <p class="content">Stream our top tracks below:</p>
+            <p class="content mb-2">Stream our top tracks:</p>
             <div class="box">
                 <iframe
                     src="https://open.spotify.com/embed/artist/5fZMIiZ4K0VMfi4Ebo6M71"
@@ -58,26 +64,37 @@
                     allow="encrypted-media">
                 </iframe>
             </div>
-            <div class="columns is-multiline">
-                <div
-                    class="column is-one-third"
-                    v-for="track in tracks"
-                    :key="track.title">
-                    <div class="box">
-                        <h4 class="title is-6">{{ track.title }}</h4>
-                        <p class="content">{{ track.description }}</p>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- Videos Section -->
         <section
             class="section"
             id="videos">
-            <h2 class="title is-4">Videos</h2>
+            <h2 class="title is-4">Music Videos</h2>
             <hr class="mx-0" />
             <YouTubeGrid :videos="videos" />
+        </section>
+
+        <!-- Media Coverage Section -->
+        <section
+            class="section"
+            id="press">
+            <h2 class="title is-4">Media Coverage</h2>
+            <hr class="mx-0" />
+            <div class="columns is-multiline">
+                <div
+                    class="column is-one-third"
+                    v-for="item in liveItems"
+                    :key="item.title">
+                    <div class="box">
+                        <h4 class="title is-6">{{ item.title }}</h4>
+                        <video
+                            class="live-video"
+                            :src="item.source"
+                            controls />
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Press Photos Section -->
@@ -87,10 +104,6 @@
             <h2 class="title is-4">Press Photos</h2>
             <hr class="mx-0" />
 
-            <p class="content">
-                High-resolution photos available for download. Click on images
-                to view full size.
-            </p>
             <vue-easy-lightbox
                 :visible="visibleRef"
                 :imgs="images"
@@ -98,7 +111,7 @@
                 @hide="onHide"></vue-easy-lightbox>
             <div class="columns is-multiline">
                 <div
-                    class="column is-one-third"
+                    class="column is-one-third is-clickable"
                     v-for="(thumb, index) in thumbnails"
                     :key="index"
                     @click="() => showImg(index)">
@@ -110,47 +123,20 @@
                 </div>
             </div>
             <p class="has-text-right is-italic">
-                Photos by [Photographer Name] © [Year]
+                Photos by Julia Grandegger © 2025
             </p>
-        </section>
-
-        <!-- Press & Media Coverage Section -->
-        <section
-            class="section"
-            id="press">
-            <h2 class="title is-4">Press & Media Coverage</h2>
-            <hr class="mx-0" />
-            <div class="columns is-multiline">
-                <div
-                    class="column is-half"
-                    v-for="press in pressItems"
-                    :key="press.title">
-                    <div class="box">
-                        <h4 class="title is-6">{{ press.title }}</h4>
-                        <p class="content has-text-grey">{{ press.source }}</p>
-                        <p class="content is-italic">{{ press.quote }}</p>
-                        <a
-                            :href="press.link"
-                            class="button is-link is-small"
-                            >Read Full Article</a
-                        >
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- Tour Dates Section -->
         <section
             class="section"
             id="tour">
-            <h2 class="title is-4">Tour Dates & Upcoming Releases</h2>
+            <h2 class="title is-4">Upcoming Shows</h2>
             <hr class="mx-0" />
-            <TourDates
-                :tourDates="tourDates"
-                :upcomingReleases="upcomingReleases" />
+            <TourDates :showDates="showDates" />
         </section>
 
-        <!-- Social Media & Streaming Links Section -->
+        <!-- Social Media Section -->
         <section
             class="section"
             id="social">
@@ -162,17 +148,24 @@
 </template>
 
 <script>
-import photo1 from "~/assets/images/gallery/left.jpg";
-import photo1_thumb from "~/assets/images/gallery/left_thumb.jpg";
-import photo2 from "~/assets/images/gallery/mid.jpg";
-import photo2_thumb from "~/assets/images/gallery/mid_thumb.jpg";
-import photo3 from "~/assets/images/gallery/right.jpg";
-import photo3_thumb from "~/assets/images/gallery/right_thumb.jpg";
+import TourDates from "@/components/TourDates.vue";
+import YouTubeGrid from "@/components/YouTubeGrid.vue";
 
 import VueEasyLightbox from "vue-easy-lightbox";
-import YouTubeGrid from "@/components/YouTubeGrid.vue";
-import TourDates from "@/components/TourDates.vue";
-import { tourDates, upcomingReleases } from "@/data/tourDates";
+import photo1 from "~/assets/images/epk/1.jpg";
+import photo1_thumb from "~/assets/images/epk/1.jpg";
+import photo2 from "~/assets/images/epk/2.jpg";
+import photo3 from "~/assets/images/epk/3.jpg";
+import photo4 from "~/assets/images/epk/4.jpg";
+import photo4_thumb from "~/assets/images/epk/4.jpg";
+import photo5 from "~/assets/images/epk/5.jpg";
+import photo5_thumb from "~/assets/images/epk/5.jpg";
+import photo6 from "~/assets/images/epk/6.jpg";
+
+import liveVideo1 from "~/assets/videos/GOLDEN_TREES_live.mov";
+import liveVideo2 from "~/assets/videos/so_many_times_live.mov";
+import liveVideo3 from "~/assets/videos/worth_your_while_live.mp4";
+import { showDates } from "~/data/dates";
 
 export default {
     name: "EPKView",
@@ -192,27 +185,7 @@ export default {
     },
     data() {
         return {
-            tourDates,
-            upcomingReleases,
-            tracks: [
-                // ...existing data...
-                {
-                    title: "If You Want It",
-                    description: "Description of Track 1"
-                },
-                {
-                    title: "Half Past Five",
-                    description: "Description of Track 2"
-                },
-                {
-                    title: "Golden Trees",
-                    description: "Description of Track 3"
-                },
-                {
-                    title: "Track 4",
-                    description: "Description of Track 4"
-                }
-            ],
+            showDates,
             videos: [
                 {
                     title: "Video 1",
@@ -231,31 +204,25 @@ export default {
                     url: "https://www.youtube-nocookie.com/embed/aHxVqtoO8R0?controls=0&showinfo=0&vq=hd1080&playsinline=1"
                 }
             ],
-            pressItems: [
+            liveItems: [
                 // ...existing data...
                 {
-                    title: "Press Item 1",
-                    source: "Source Name",
-                    quote: "A quote from the article.",
-                    link: "https://example.com"
+                    source: liveVideo1,
+                    title: "Golden Trees live"
                 },
                 {
-                    title: "Press Item 2",
-                    source: "Source Name",
-                    quote: "A quote from the article.",
-                    link: "https://example.com"
+                    source: liveVideo2,
+                    title: "So Many Times live"
                 },
                 {
-                    title: "Press Item 3",
-                    source: "Source Name",
-                    quote: "A quote from the article.",
-                    link: "https://example.com"
+                    source: liveVideo3,
+                    title: "Worth Your While live"
                 }
             ],
             visibleRef: false,
             indexRef: 0,
-            images: [photo1, photo2, photo3],
-            thumbnails: [photo1_thumb, photo2_thumb, photo3_thumb]
+            images: [photo5, photo1, photo4, photo2, photo3, photo6],
+            thumbnails: [photo5_thumb, photo1_thumb, photo4_thumb]
         };
     },
     methods: {
@@ -270,4 +237,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.live-video {
+    height: 300px;
+}
+</style>

@@ -4,7 +4,10 @@
         class="navbar is-fixed-top"
         :class="{ 'is-on-landing': onLanding }">
         <!-- Brand and toggle get grouped for better mobile display -->
+
         <div class="navbar-brand">
+                <Logo id="logo" />
+
             <a
                 class="navbar-item bandname"
                 style="opacity: 0"
@@ -18,9 +21,10 @@
                 data-target="navbarMenu"
                 @click="toggleMenu"
                 :class="{ 'is-active': menuOpen }">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </div>
         </div>
 
@@ -67,9 +71,13 @@
 </template>
 
 <script lang="ts">
+import Logo from "@/components/Logo/Logo.vue";
 import { defineComponent, ref } from "vue";
 
 export default defineComponent({
+    components: {
+        Logo
+    },
     setup() {
         const onLanding = ref(true);
         const menuOpen = ref(false);
@@ -105,6 +113,20 @@ export default defineComponent({
 @use "bulma/sass/utilities/mixins" as mixins;
 @use "bulma/sass/utilities/initial-variables" as bulmaVars;
 
+
+#logo {
+
+    filter: drop-shadow(0px 0px 5px #fff);
+    vertical-align: middle;
+
+    width: 50px;
+    height: 50px;
+    min-height: 50px;;
+    min-width: 50px;;
+
+
+}
+
 .navbar {
     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.15);
     font-family: FitzBrothers, "Helvetica Neue", Arial, serif;
@@ -118,11 +140,13 @@ export default defineComponent({
 
     .bandname {
         font-size: 18px;
+        line-height: 18px;
     }
 
     @include mixins.tablet {
         .bandname {
             font-size: 14px;
+            line-height: 14px;
         }
     }
 

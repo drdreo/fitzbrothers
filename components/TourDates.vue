@@ -1,21 +1,15 @@
 <template>
     <div class="tour-dates">
-        <h2
-            v-if="!onMainPage"
-            class="title is-6">
-            Tour Dates
-        </h2>
-
         <div
             class="columns is-multiline"
             :class="{ 'is-centered': onMainPage }">
             <div
                 class="column is-one-third"
-                v-for="(date, index) in tourDates"
+                v-for="(date, index) in showDates"
                 :key="index">
                 <div
                     class="box"
-                    :style="getBackgroundStyle(date.city)">
+                    :style="getBackgroundStyle(date.bg)">
                     <div class="overlay">
                         <h3 class="title is-5">{{ date.date }}</h3>
                         <p class="subtitle is-6">{{ date.venue }}</p>
@@ -57,7 +51,8 @@
 
 <script>
 import viennaBg from "~/assets/images/cities/vienna.jpg";
-import berlinBg from "~/assets/images/cities/berlin.jpg";
+import enzersdorfBg from "~/assets/images/cities/enzersdorf.webp";
+import waidhofenBg from "~/assets/images/cities/waidhofen.jpg";
 
 export default {
     name: "TourDates",
@@ -66,7 +61,7 @@ export default {
             type: Boolean,
             required: false
         },
-        tourDates: {
+        showDates: {
             type: Array,
             required: true
         },
@@ -79,7 +74,8 @@ export default {
         getBackgroundStyle(city) {
             const cityBackgrounds = {
                 vienna: viennaBg,
-                berlin: berlinBg
+                waidhofen: waidhofenBg,
+                enzersdorf: enzersdorfBg
             };
             const backgroundImage = cityBackgrounds[city.toLowerCase()] || null;
             return backgroundImage
@@ -128,7 +124,7 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.65); /* Semi-transparent overlay */
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
         z-index: 1;
     }
 
