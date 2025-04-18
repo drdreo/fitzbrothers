@@ -12,16 +12,10 @@
                     :style="getBackgroundStyle(date.bg)">
                     <div class="overlay">
                         <h3 class="title is-5">{{ date.date }}</h3>
-                        <p class="subtitle is-6">{{ date.venue }}</p>
+                        <p class="subtitle is-6 mb-1">{{ date.venue }}</p>
                         <p class="content">
                             {{ date.city }}, {{ date.country }}
                         </p>
-                        <a
-                            :href="date.ticketLink"
-                            class="button is-link is-small"
-                            target="_blank">
-                            Get Tickets
-                        </a>
                     </div>
                 </div>
             </div>
@@ -36,7 +30,9 @@
                     :key="index">
                     <div class="box">
                         <div class="overlay">
-                            <h4 class="title is-5">"{{ release.title }}"</h4>
+                            <h4 class="title is-5 bulma-is-palette-light">
+                                "{{ release.title }}"
+                            </h4>
                             <p class="subtitle is-6">
                                 Release Date: {{ release.date }}
                             </p>
@@ -95,6 +91,19 @@ export default {
 </script>
 
 <style scoped>
+
+@media (prefers-color-scheme: light) {
+    .box {
+
+        .title {
+            color: white;
+        }
+        .subtitle {
+            color: #b5b5b5;
+        }
+    }
+}
+
 .tour-dates {
     .box {
         position: relative;

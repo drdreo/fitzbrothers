@@ -25,7 +25,7 @@
                         color-rendering="optimizeSpeed"
                         result="blurred"></feGaussianBlur>
                     <feFlood
-                        flood-color="white"
+                        flood-color="black"
                         result="flooded">
                         <animate
                             attributeName="flood-color"
@@ -33,7 +33,7 @@
                             begin="indefinite"
                             dur="1.5s"
                             calcMode="spline"
-                            values="white;rgba(255,255,255,0.35)"
+                            values="black;rgba(0,0,0,0.15)"
                             keySplines="0.5,0,0.3,1"
                             fill="freeze"></animate>
                     </feFlood>
@@ -72,7 +72,7 @@
                     keySplines="0.3,0,0,1"></animateTransform>
                 <g
                     id="stroked"
-                    stroke="white"
+                    class="logo-stroke"
                     stroke-width="4"
                     stroke-linecap="square"
                     fill="none">
@@ -119,7 +119,7 @@
                 </g>
                 <g
                     id="filled"
-                    fill="white">
+                    class="logo-fill">
                     <g id="vertical">
                         <set
                             attributeName="visibility"
@@ -235,6 +235,8 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@use "bulma/sass/utilities/mixins.scss" as mixins;
+
 @keyframes appear {
     0% {
         opacity: 0;
@@ -246,6 +248,33 @@ export default defineComponent({
 
 #logo_svg {
     cursor: pointer;
+    color: black;
+}
+
+.is-on-landing {
+    #logo_svg {
+        color: white;
+    }
+}
+
+@include mixins.mobile {
+    #logo_svg {
+        color: black !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #logo_svg {
+        color: white !important;
+    }
+}
+
+.logo-fill {
+    fill: currentColor;
+}
+
+.logo-stroke {
+    stroke: currentColor;
 }
 
 .rotate {

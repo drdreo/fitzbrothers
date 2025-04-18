@@ -43,7 +43,7 @@ export default defineComponent({
     @include mixins.mobile {
         height: 60vh;
         margin-top: 40px;
-        background-position-x: -180px; // tmp fix for that image
+        background-position-x: -260px; // adjusted for better mobile positioning
     }
 }
 
