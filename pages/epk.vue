@@ -164,21 +164,21 @@ import photo6 from "~/assets/images/epk/6.jpg";
 
 import { showDates } from "~/data/dates";
 
+useHead({
+    title: "Fitz Brothers (official) | Electronic Press Kit - EPK",
+    meta: [
+        {
+            name: "description",
+            content: "Official Electronic Press Kit for Fitz Brothers"
+        }
+    ]
+});
+
 export default {
-    name: "EPKView",
     components: {
         TourDates,
         VueEasyLightbox,
         YouTubeGrid
-    },
-    metaInfo: {
-        title: "Fitz Brothers (official) | Electronic Press Kit - EPK",
-        meta: [
-            {
-                name: "description",
-                content: "Official Electronic Press Kit for [Your Band Name]"
-            }
-        ]
     },
     data() {
         return {
