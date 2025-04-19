@@ -147,6 +147,17 @@
     </div>
 </template>
 
+<script setup>
+useHead({
+    title: "Fitz Brothers (official) | Electronic Press Kit - EPK",
+    meta: [
+        {
+            name: "description",
+            content: "Official Electronic Press Kit for Fitz Brothers"
+        }
+    ]
+});
+</script>
 <script>
 import TourDates from "@/components/TourDates.vue";
 import YouTubeGrid from "@/components/YouTubeGrid.vue";
@@ -163,16 +174,6 @@ import photo5_thumb from "~/assets/images/epk/5.jpg";
 import photo6 from "~/assets/images/epk/6.jpg";
 
 import { showDates } from "~/data/dates";
-
-useHead({
-    title: "Fitz Brothers (official) | Electronic Press Kit - EPK",
-    meta: [
-        {
-            name: "description",
-            content: "Official Electronic Press Kit for Fitz Brothers"
-        }
-    ]
-});
 
 export default {
     components: {

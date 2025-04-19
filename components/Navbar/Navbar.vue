@@ -65,7 +65,7 @@
                     class="page-scroll navbar-item"
                     v-reveal="1200"
                     style="opacity: 0"
-                    href="/epk">
+                    href="/epk/">
                     EPK
                 </a>
             </div>
