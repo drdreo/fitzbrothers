@@ -30,7 +30,7 @@ export default defineComponent({
     computed: {
         displayDate() {
             if (this.currentDate > this.targetDate) {
-                return "Half Past Five"; // "Out now";
+                return "Maybe It Was Love"; // "Out now";
             } else {
                 // Format the target date according to your requirements
                 return this.targetDate.toLocaleDateString("en-US", {
