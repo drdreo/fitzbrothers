@@ -5,11 +5,13 @@
             :class="{ 'is-centered': onMainPage }">
             <div
                 class="column is-one-third"
-                v-for="(date, index) in showDates"
+                v-for="(date, index) in filteredDates"
                 :key="index">
                 <div
                     class="box"
-                    :style="getBackgroundStyle(date.bg)">
+                    :class="{ 'is-clickable': date.ticketLink }"
+                    :style="getBackgroundStyle(date.bg)"
+                    @click="openTicketLink(date.ticketLink)">
                     <div class="overlay">
                         <h3 class="title is-5">{{ date.date }}</h3>
                         <p class="subtitle is-6 mb-1">{{ date.venue }}</p>
@@ -66,7 +68,22 @@ export default {
             required: false
         }
     },
+    computed: {
+        filteredDates() {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // Set to midnight to compare dates only
+            return this.showDates.filter(date => {
+                const eventDate = new Date(date.date);
+                return eventDate >= today;
+            });
+        }
+    },
     methods: {
+        openTicketLink(link) {
+            if (link) {
+                window.open(link, "_blank", "noopener,noreferrer");
+            }
+        },
         getBackgroundStyle(city) {
             const cityBackgrounds = {
                 vienna: viennaBg,
@@ -116,9 +133,13 @@ export default {
         color: white; /* Ensure text is visible on dark backgrounds */
     }
 
-    .box:hover {
+    .box.is-clickable:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .box.is-clickable:hover {
+        cursor: pointer;
     }
 
     .overlay {

@@ -6,7 +6,6 @@ export const showDates = [
         bg: "enzersdorf",
         venue: "Hoefefest",
         time: "20:00",
-        ticketLink: "https://ticketmaster.com/tickets"
     },
     {
         date: "2025-09-25",
@@ -15,7 +14,7 @@ export const showDates = [
         country: "Austria",
         venue: "Club Lucia",
         time: "21:00",
-        ticketLink: "https://ticketmaster.com/tickets"
+        ticketLink: "https://www.clublucia.at/event/fitz-brothers-light-life-love-album-release-show-2"
     },
     {
         date: "2025-10-18",
