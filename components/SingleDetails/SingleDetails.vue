@@ -1,6 +1,6 @@
 <template>
     <div class="single-preview has-text-centered column is-12">
-        <h2 class="title has-text-weight-bold">New Single</h2>
+        <h2 class="title has-text-weight-bold">New Album</h2>
         <p class="subtitle is-6 is-uppercase">{{ displayDate }}</p>
 
         <div class="columns">
@@ -24,13 +24,13 @@ export default defineComponent({
     data() {
         return {
             currentDate: new Date(),
-            targetDate: new Date("September 13, 2024")
+            targetDate: new Date("September 26, 2025")
         };
     },
     computed: {
         displayDate() {
             if (this.currentDate > this.targetDate) {
-                return "Maybe It Was Love"; // "Out now";
+                return "Light Life Love"; // "Out now";
             } else {
                 // Format the target date according to your requirements
                 return this.targetDate.toLocaleDateString("en-US", {
