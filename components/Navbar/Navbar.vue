@@ -63,11 +63,22 @@
                 <!--                          style="opacity: 0">EPK</NuxtLink>-->
                 <a
                     class="page-scroll navbar-item"
-                    v-reveal="1200"
+                    v-reveal="1100"
                     style="opacity: 0"
                     href="/epk/">
                     EPK
                 </a>
+
+                <a
+                    class="navbar-item shop-link"
+                    href="https://shop.fitzbrothers.at"
+                    rel="noopener"
+                    style="opacity: 0"
+                    target="_blank"
+                    v-reveal="1200">
+                    Shop</a
+                >
+
             </div>
         </div>
     </nav>
@@ -135,6 +146,10 @@ export default defineComponent({
     &-item {
         transition: all 0.35s ease;
         padding-bottom: 1rem;
+    }
+
+    .shop-link {
+        color: #daa420 !important;
     }
 
     .bandname {
