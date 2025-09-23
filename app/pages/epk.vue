@@ -123,7 +123,7 @@
                 </div>
             </div>
             <p class="has-text-right is-italic">
-                Photos by Julia Grandegger © 2025
+                Photos by Lukas Johann © 2025
             </p>
         </section>
 
