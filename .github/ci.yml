@@ -1,0 +1,40 @@
+name: Build and Deploy
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: "Node.js: setup"
+              uses: actions/setup-node@v5
+              with:
+                  node-version: "24"
+
+            - name: "pnpm: install"
+              run: npm install -g pnpm
+
+            - name: "pnpm: install dependencies"
+              run: pnpm install
+
+            - name: "nuxt: build and generate"
+              run: |
+                  pnpm run build
+                  pnpm run generate
+
+            - name: "FTP: 📂 sync files"
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+              with:
+                  server: ${{ vars.FTP_SERVER }}
+                  username: ${{ vars.FTP_USERNAME }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  local-dir: .output/public/
+                  server-dir: html/page/
+                  dry-run: true
+
