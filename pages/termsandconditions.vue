@@ -313,7 +313,7 @@
                     <p>
                         Website by
                         <a
-                            href="//andreas-hahn.at"
+                            href="https://www.andreas-hahn.at"
                             target="_blank"
                             >Andreas K. Hahn</a
                         >, Logo by
