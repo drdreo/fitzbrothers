@@ -20,7 +20,7 @@
     },
     "devDependencies": {
         "@nuxt/devtools": "latest",
-        "nuxt": "^3.19.2",
+        "nuxt": "^4.1.2",
         "prettier": "^3.6.2",
         "sharp": "^0.33.5",
         "svgo": "^4.0.0",
