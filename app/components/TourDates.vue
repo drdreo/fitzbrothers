@@ -10,7 +10,6 @@
                 <div
                     class="box"
                     :class="{ 'is-clickable': date.ticketLink }"
-                    :style="getBackgroundStyle(date.bg)"
                     @click="openTicketLink(date.ticketLink)">
                     <div class="overlay">
                         <h3 class="title is-5">{{ date.date }}</h3>
@@ -48,10 +47,6 @@
 </template>
 
 <script>
-import viennaBg from "~/assets/images/cities/vienna.jpg";
-import enzersdorfBg from "~/assets/images/cities/enzersdorf.webp";
-import waidhofenBg from "~/assets/images/cities/waidhofen.jpg";
-
 export default {
     name: "TourDates",
     props: {
@@ -72,7 +67,7 @@ export default {
         filteredDates() {
             const today = new Date();
             today.setHours(0, 0, 0, 0); // Set to midnight to compare dates only
-            return this.showDates.filter(date => {
+            return this.showDates.filter((date) => {
                 const eventDate = new Date(date.date);
                 return eventDate >= today;
             });
@@ -83,35 +78,14 @@ export default {
             if (link) {
                 window.open(link, "_blank", "noopener,noreferrer");
             }
-        },
-        getBackgroundStyle(city) {
-            const cityBackgrounds = {
-                vienna: viennaBg,
-                waidhofen: waidhofenBg,
-                enzersdorf: enzersdorfBg
-            };
-            const backgroundImage = cityBackgrounds[city.toLowerCase()] || null;
-            return backgroundImage
-                ? {
-                      backgroundImage: `url(${backgroundImage})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center"
-                  }
-                : {
-                      backgroundImage: `url(${viennaBg})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center"
-                  };
         }
     }
 };
 </script>
 
 <style scoped>
-
 @media (prefers-color-scheme: light) {
     .box {
-
         .title {
             color: white;
         }
@@ -154,12 +128,8 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+        background: rgba(0, 0, 0, 0.85);
         z-index: 1;
-    }
-
-    .button {
-        margin-top: 1rem;
     }
 }
 </style>
