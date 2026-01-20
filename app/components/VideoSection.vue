@@ -15,7 +15,7 @@ export default defineComponent({
             musicVideos: [
                 {
                     title: "Video 1",
-                    url: "https://www.youtube-nocookie.com/embed/K2StlfCk-Xs?controls=0&showinfo=0&vq=hd1080&playsinline=1"
+                    url: "https://www.youtube-nocookie.com/embed/ZCzd26UUFqc?controls=0&showinfo=0&vq=hd1080&playsinline=1"
                 },
                 {
                     title: "Video 2",
@@ -27,7 +27,7 @@ export default defineComponent({
                 },
                 {
                     title: "Video 4",
-                    url: "https://www.youtube-nocookie.com/embed/aHxVqtoO8R0?controls=0&showinfo=0&vq=hd1080&playsinline=1"
+                    url: "https://www.youtube-nocookie.com/embed/Iy02jsEPJjo?controls=0&showinfo=0&vq=hd1080&playsinline=1"
                 }
             ]
         };

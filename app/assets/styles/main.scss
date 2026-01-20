@@ -32,7 +32,7 @@ hr {
     height: 0;
     box-sizing: content-box;
     margin: 20px auto;
-    border: 3px #daa520;
+    border: 3px overrides.$gold;
     border-top-style: solid;
     max-width: 50px;
 }

@@ -78,7 +78,6 @@
                     v-reveal="1200">
                     Shop</a
                 >
-
             </div>
         </div>
     </nav>

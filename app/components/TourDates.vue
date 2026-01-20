@@ -12,11 +12,16 @@
                     :class="{ 'is-clickable': date.ticketLink }"
                     @click="openTicketLink(date.ticketLink)">
                     <div class="overlay">
-                        <h3 class="title is-5">{{ date.date }}</h3>
-                        <p class="subtitle is-6 mb-1">{{ date.venue }}</p>
-                        <p class="content">
+                        <h3 class="title is-6">{{ date.date }}</h3>
+                        <p class="subtitle is-5 mb-1">{{ date.venue }}</p>
+                        <p class="content is-7">
                             {{ date.city }}, {{ date.country }}
                         </p>
+                        <span
+                            v-if="date.ticketLink"
+                            class="tickets">
+                            Tickets
+                        </span>
                     </div>
                 </div>
             </div>
@@ -130,6 +135,10 @@ export default {
         height: 100%;
         background: rgba(0, 0, 0, 0.85);
         z-index: 1;
+    }
+
+    .tickets {
+        color: #daa520;
     }
 }
 </style>
