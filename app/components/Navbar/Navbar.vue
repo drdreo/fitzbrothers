@@ -58,9 +58,6 @@
                     Contact
                 </a>
 
-                <!--                <NuxtLink to="/epk"  class="page-scroll navbar-item"-->
-                <!--                          v-reveal="1000"-->
-                <!--                          style="opacity: 0">EPK</NuxtLink>-->
                 <a
                     class="page-scroll navbar-item"
                     v-reveal="1100"

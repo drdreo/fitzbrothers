@@ -25,5 +25,19 @@ export const showDates = [
         time: "20:00",
         ticketLink:
             "https://www.eventim-light.com/at/a/696f593e3311675282846f66/e/696f776cbd8e02636bb6eb4a"
+    },
+    {
+        date: "2026-04-04",
+        city: "Klagenfurt",
+        country: "Austria",
+        venue: "VZ",
+        time: "20:00"
+    },
+    {
+        date: "2026-05-28",
+        city: "Wien",
+        country: "Austria",
+        venue: "Fluc Wanne",
+        time: "20:00"
     }
 ];

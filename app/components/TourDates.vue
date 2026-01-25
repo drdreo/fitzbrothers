@@ -13,15 +13,16 @@
                     @click="openTicketLink(date.ticketLink)">
                     <div class="overlay">
                         <h3 class="title is-6">{{ date.date }}</h3>
-                        <p class="subtitle is-5 mb-1">{{ date.venue }}</p>
+                        <p class="subtitle is-5 my-1">{{ date.venue }}</p>
                         <p class="content is-7">
                             {{ date.city }}, {{ date.country }}
+                            <br />
+                            <span
+                                v-if="date.ticketLink"
+                                class="tickets">
+                                Tickets
+                            </span>
                         </p>
-                        <span
-                            v-if="date.ticketLink"
-                            class="tickets">
-                            Tickets
-                        </span>
                     </div>
                 </div>
             </div>

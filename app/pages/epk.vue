@@ -2,6 +2,15 @@
     <div class="container pt-6">
         <h1 class="title has-text-centered">Electronic Press Kit</h1>
 
+        <div class="has-text-centered mb-5">
+            <a
+                href="/Fitz Brothers EPK English 2026.pdf"
+                target="_blank"
+                class="button is-primary">
+                Download EPK (PDF)
+            </a>
+        </div>
+
         <!-- Artist Bio Section -->
         <section
             class="section"
@@ -126,24 +135,6 @@
                 Photos by Lukas Johann © 2025
             </p>
         </section>
-
-        <!-- Tour Dates Section -->
-        <section
-            class="section"
-            id="tour">
-            <h2 class="title is-4">Upcoming Shows</h2>
-            <hr class="mx-0" />
-            <TourDates :showDates="showDates" />
-        </section>
-
-        <!-- Social Media Section -->
-        <section
-            class="section"
-            id="social">
-            <h2 class="title is-4">Connect With Us</h2>
-            <hr class="mx-0" />
-            <Social />
-        </section>
     </div>
 </template>
 
@@ -187,7 +178,7 @@ export default {
             videos: [
                 {
                     title: "Video 1",
-                    url: "https://www.youtube-nocookie.com/embed/K2StlfCk-Xs?controls=0&showinfo=0&vq=hd1080&playsinline=1"
+                    url: "https://www.youtube-nocookie.com/embed/ZCzd26UUFqc?controls=0&showinfo=0&vq=hd1080&playsinline=1"
                 },
                 {
                     title: "Video 2",
@@ -199,10 +190,14 @@ export default {
                 },
                 {
                     title: "Video 4",
-                    url: "https://www.youtube-nocookie.com/embed/aHxVqtoO8R0?controls=0&showinfo=0&vq=hd1080&playsinline=1"
+                    url: "https://www.youtube-nocookie.com/embed/Iy02jsEPJjo?controls=0&showinfo=0&vq=hd1080&playsinline=1"
                 }
             ],
             liveItems: [
+                {
+                    source: "http://fitzbrothers.at/static/videos/show_reel_eng.mov",
+                    title: "Booking Show Reel"
+                },
                 {
                     source: "http://fitzbrothers.at/static/videos/so_many_times_live.mov",
                     title: "So Many Times live"
