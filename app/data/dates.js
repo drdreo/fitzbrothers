@@ -38,6 +38,8 @@ export const showDates = [
         city: "Wien",
         country: "Austria",
         venue: "Fluc Wanne",
-        time: "20:00"
+        time: "20:00",
+        ticketLink:
+            "https://www.eventim-light.com/at/a/6964cd96fdc6423494db2b42/e/6964db7eb68aca0029078eea"
     }
 ];
