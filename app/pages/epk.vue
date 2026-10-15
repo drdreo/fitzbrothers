@@ -9,6 +9,13 @@
                 class="button is-primary">
                 Download EPK (PDF)
             </a>
+            <a
+                href="https://www.dropbox.com/scl/fo/dydo1nbvdkqwmtynfgbyp/APLD_kMiGQNKsRokRy_rdyE?rlkey=5bxx6td56pbjgfcib4i8ozy63&st=2a63tx4i&dl=0"
+                target="_blank"
+                rel="noopener"
+                class="button is-primary is-outlined ml-2">
+                Dropbox Media Kit
+            </a>
         </div>
 
         <!-- Artist Bio Section -->
@@ -28,20 +35,18 @@
                 </div>
                 <div class="column">
                     <p class="content">
-                        Great passion, red beards and a common vision. That’s
-                        what connects the two brothers from northern Austria,
-                        Florian Sebastian and Felix Fitz.
+                        Two brothers from Northern Austria bound together by
+                        more than just their love for music. Inspired by
+                        feelings, they reach beneath the surface.
                     </p>
                     <p class="content my-2">
-                        After several individual musical projects, partly solo,
-                        partly in different bands, the two have now released
-                        several singles together (“Golden Trees”, “Sunday”,
-                        “Groggy”, etc.) and developed more and more their very
-                        own sound. Stylistically, the duo moves somewhere
-                        between pop and indie, difficult to pin down, but
-                        therefore all the more exciting. In any case, they are
-                        always about more than just nice music - they’re about
-                        feelings, passion and the human condition.
+                        Since 2017 the project has evolved from simply sorting
+                        out their emotions through music to releasing their
+                        debut album “Light Life Love” in 2025. The way the Fitz
+                        Brothers tell their story is almost cinematic. They
+                        possess a tendency of spinning pop and indie together to
+                        produce songs made to feel. Emotions meant for the big
+                        screen…
                     </p>
                     <p class="content">
                         In their own words: “Music has always been our way to
@@ -52,6 +57,52 @@
                         yourself. That’s what music has always done. That’s what
                         it does for us.”
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facts Section -->
+        <section
+            class="section"
+            id="facts">
+            <div class="columns is-variable is-8">
+                <div class="column">
+                    <h2 class="title is-4">Previous Live Shows</h2>
+                    <hr class="mx-0" />
+                    <table class="table shows-table">
+                        <tbody>
+                            <tr
+                                v-for="show in previousShows"
+                                :key="show.city">
+                                <td>{{ show.city }}</td>
+                                <td class="has-text-right">{{ show.venue }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="is-italic">and more…</p>
+                </div>
+                <div class="column">
+                    <h2 class="title is-4">Statistics</h2>
+                    <hr class="mx-0" />
+                    <div class="columns is-mobile">
+                        <div class="column has-text-centered">
+                            <p class="title is-2">530k+</p>
+                            <p class="heading">Total Streams (Spotify)</p>
+                        </div>
+                        <div class="column has-text-centered">
+                            <p class="title is-2">4.9k+</p>
+                            <p class="heading">Followers on Instagram</p>
+                        </div>
+                    </div>
+                    <blockquote class="content is-italic mt-5">
+                        “With lyrics full of emotion and a vision that goes
+                        beyond music alone, the Fitz Brothers establish
+                        themselves as an authentic and touching voice within the
+                        independent scene.”
+                        <span class="is-block has-text-right mt-2">
+                            — Oleada Indie
+                        </span>
+                    </blockquote>
                 </div>
             </div>
         </section>
@@ -175,6 +226,13 @@ export default {
     data() {
         return {
             showDates,
+            previousShows: [
+                { city: "Vienna", venue: "Flucc Wanne" },
+                { city: "Graz", venue: "Postgarage" },
+                { city: "Salzburg", venue: "MARK" },
+                { city: "Innsbruck", venue: "Livestage" },
+                { city: "Antwerp", venue: "Zuiderpershuis" }
+            ],
             videos: [
                 {
                     title: "Video 1",
@@ -228,5 +286,10 @@ export default {
 <style scoped>
 .live-video {
     height: 300px;
+}
+
+.shows-table {
+    width: 100%;
+    max-width: 400px;
 }
 </style>
