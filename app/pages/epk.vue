@@ -10,7 +10,7 @@
                 Download EPK (PDF)
             </a>
             <a
-                href="https://www.dropbox.com/scl/fo/dydo1nbvdkqwmtynfgbyp/APLD_kMiGQNKsRokRy_rdyE?rlkey=5bxx6td56pbjgfcib4i8ozy63&st=2a63tx4i&dl=0"
+                href="https://www.dropbox.com/scl/fo/ldmwas8lvq6y6jv22lu2a/AKC9G2R3aHf94FTJkUu2YP4?rlkey=fr30j5wuv5hj32f1ucnguv299&st=5fsakz6f&dl=0"
                 target="_blank"
                 rel="noopener"
                 class="button is-primary is-outlined ml-2">
