@@ -1,6 +1,6 @@
 <template>
     <div class="single-preview has-text-centered column is-12">
-        <h2 class="title has-text-weight-bold">New Album</h2>
+        <h2 class="title has-text-weight-bold">New Single</h2>
         <p class="subtitle is-6 is-uppercase">{{ displayDate }}</p>
 
         <div class="columns">
@@ -10,7 +10,7 @@
                     style="max-width: 350px; margin: auto">
                     <img
                         src="~assets/images/single_cover.jpg"
-                        alt="Single Cover" />
+                        alt="Bring It On - Single Cover" />
                 </figure>
             </div>
         </div>
@@ -30,7 +30,7 @@ export default defineComponent({
     computed: {
         displayDate() {
             if (this.currentDate > this.targetDate) {
-                return "Light Life Love"; // "Out now";
+                return "Bring It On"; // "Out now";
             } else {
                 // Format the target date according to your requirements
                 return this.targetDate.toLocaleDateString("en-US", {
