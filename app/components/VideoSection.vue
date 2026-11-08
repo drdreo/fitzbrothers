@@ -28,10 +28,6 @@ export default defineComponent({
                 {
                     title: "Video 4",
                     url: "https://www.youtube-nocookie.com/embed/LJjs8v8kle0?controls=0&showinfo=0&vq=hd1080&playsinline=1"
-                },
-                {
-                    title: "Video 5",
-                    url: "https://www.youtube-nocookie.com/embed/Iy02jsEPJjo?controls=0&showinfo=0&vq=hd1080&playsinline=1"
                 }
             ]
         };
